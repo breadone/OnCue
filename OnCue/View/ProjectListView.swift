@@ -11,7 +11,7 @@ import Defaults
 struct ProjectListView: View {
     @Default(.projects) private var projectList
     
-    private var sortedList: [Project] { // sorts projects by date created (i hope)
+    private var sortedList: [Project] { // sorts projects by date created
         self.projectList.sorted {
             $0.dateCreated > $1.dateCreated
         }
@@ -19,16 +19,25 @@ struct ProjectListView: View {
     
     var body: some View {
         NavigationView {
-            List(sortedList, id: \.id) { p in
-                HStack {
-                    Text(p.name)
-                    Text(formatDate(p.dateCreated))
+            ScrollView {
+                ForEach(sortedList, id: \.id) { proj in
+                    ProjectCardView(project: proj)
+                        .padding(.vertical, 5)
+                        .padding(.horizontal)
+                        .contextMenu {
+                            Button(action: {self.removeProject(proj.id)}) {
+                                Text("Delete")
+                                Image(systemName: "trash")
+                            }
+                        }
                 }
             }
+            .navigationTitle("Projects")
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    Button("addTest") {
-                        self.projectList.append(Project(name: "test"))
+                    Button("add test") {
+                        self.projectList.append(Project(name: "sample project",
+                                                        cards: [Card(0, text: "card one"), Card(1, text: "card two")]))
                     }
                 }
                 ToolbarItem(placement: .navigationBarLeading) {
@@ -46,6 +55,12 @@ extension ProjectListView {
         let formatter = DateFormatter()
         formatter.dateFormat = format
         return formatter.string(from: d)
+    }
+    
+    func removeProject(_ id: UUID) {
+        self.projectList.removeAll {
+            $0.id == id
+        }
     }
 }
 

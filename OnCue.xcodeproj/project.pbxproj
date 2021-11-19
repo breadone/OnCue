@@ -22,6 +22,9 @@
 		46F611AB2747370500708686 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F611A92747370500708686 /* Project.swift */; };
 		46F611AE274737A900708686 /* DefaultsConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F611AD274737A900708686 /* DefaultsConfig.swift */; };
 		46F611AF274737A900708686 /* DefaultsConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F611AD274737A900708686 /* DefaultsConfig.swift */; };
+		46F611B1274774D900708686 /* ProjectCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F611B0274774D900708686 /* ProjectCardView.swift */; };
+		46F611B22747784A00708686 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46F61170274733B500708686 /* Assets.xcassets */; };
+		46F611B52747789E00708686 /* ExtensionColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F611B42747789E00708686 /* ExtensionColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -52,6 +55,8 @@
 		46F611A32747369200708686 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		46F611A92747370500708686 /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
 		46F611AD274737A900708686 /* DefaultsConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultsConfig.swift; sourceTree = "<group>"; };
+		46F611B0274774D900708686 /* ProjectCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectCardView.swift; sourceTree = "<group>"; };
+		46F611B42747789E00708686 /* ExtensionColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +102,7 @@
 			children = (
 				46F6116C274733B400708686 /* OnCueApp.swift */,
 				46F6117A274733C200708686 /* View */,
+				46F611B32747788800708686 /* Util */,
 				46F61170274733B500708686 /* Assets.xcassets */,
 				46F61172274733B500708686 /* Preview Content */,
 			);
@@ -115,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				46F6116E274733B400708686 /* ProjectListView.swift */,
+				46F611B0274774D900708686 /* ProjectCardView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -163,6 +170,14 @@
 				46F6118A274733FE00708686 /* PresentationView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		46F611B32747788800708686 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				46F611B42747789E00708686 /* ExtensionColor.swift */,
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				46F61194274733FE00708686 /* Preview Assets.xcassets in Resources */,
+				46F611B22747784A00708686 /* Assets.xcassets in Resources */,
 				46F61191274733FE00708686 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,6 +290,8 @@
 			files = (
 				46F6116F274733B400708686 /* ProjectListView.swift in Sources */,
 				46F611A42747369200708686 /* Card.swift in Sources */,
+				46F611B52747789E00708686 /* ExtensionColor.swift in Sources */,
+				46F611B1274774D900708686 /* ProjectCardView.swift in Sources */,
 				46F6116D274733B400708686 /* OnCueApp.swift in Sources */,
 				46F611AA2747370500708686 /* Project.swift in Sources */,
 				46F611AE274737A900708686 /* DefaultsConfig.swift in Sources */,

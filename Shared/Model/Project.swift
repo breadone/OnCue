@@ -8,7 +8,7 @@
 import Foundation
 import Defaults
 
-struct Project: Codable, DefaultsSerializable {
+struct Project: Codable, Identifiable, DefaultsSerializable {
     let id: UUID
     var name: String
     var cards: [Card]
