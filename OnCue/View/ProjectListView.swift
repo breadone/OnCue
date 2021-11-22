@@ -23,9 +23,9 @@ struct ProjectListView: View {
                 ScrollView {
                     ForEach(sortedList, id: \.id) { proj in
                         ProjectCardView(project: proj)
-                            .frame(height: geo.size.height / 5)
-                            .padding(.vertical, 5)
+                            .padding(.vertical, geo.size.height / 75)
                             .padding(.horizontal, geo.size.width / 23)
+                            .frame(height: geo.size.height / 6)
                             .contextMenu {
                                 Button(action: {self.removeProject(proj.id)}) {
                                     Text("Delete")
@@ -36,10 +36,13 @@ struct ProjectListView: View {
                 }
                 .navigationTitle("Projects")
                 .toolbar {
-                    ToolbarItem(placement: .navigationBarTrailing) {
+                    ToolbarItemGroup(placement: .navigationBarTrailing) {
                         Button("add test") {
                             self.projectList.append(Project(name: "sample project",
                                                             cards: [Card(0, text: "card one"), Card(1, text: "card two")]))
+                        }
+                        Button("add cards") {
+                            self.projectList[0].cards.append(Card(2, text: "wha"))
                         }
                     }
                     ToolbarItem(placement: .navigationBarLeading) {

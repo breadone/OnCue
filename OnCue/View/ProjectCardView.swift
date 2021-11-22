@@ -10,33 +10,36 @@ import SwiftUI
 struct ProjectCardView: View {
     var project: Project = Project(name: "sample project")
     var bgColour: Color = .accentColor
-    var grad = Gradient(colors: [.accentColor, .white])
     
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
-                Text(self.project.name).foregroundColor(.white)
+                Text(self.project.name)
+                    .font(.system(size: 20, weight: .heavy, design: .default))
+                    .foregroundColor(.white)
                 Spacer()
-                Text("\(self.project.cards.count) \(self.project.cards.count != 1 ? "Cards" : "Card")").foregroundColor(.white)
+                Text("\(self.project.cards.count) \(self.project.cards.count != 1 ? "Cards" : "Card")")
+                    .font(.system(size: 15, weight: .medium, design: .default))
+                    .foregroundColor(.white)
             }
-            ScrollView(.horizontal) {
-                List(self.project.cards, id: \.id) { card in
+            HStack {
+                ForEach(self.project.cards, id: \.id) { card in
                     Text(card.text)
                         .padding()
-                        .background(Color.red)
+                        .background(Color(white: 1, opacity: 0.25))
+                        .cornerRadius(13)
                 }
             }
         }
         .padding()
-//        .frame(width: self.width, height: self.height, alignment: .center)
         .background(bgColour)
         .cornerRadius(17)
         .shadow(color: bgColour, radius: 6, x: 0, y: 0)
     }
 }
 
-struct ProjectCardView_Previews: PreviewProvider {
-    static var previews: some View {
-        ProjectCardView()
-    }
-}
+//struct ProjectCardView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ProjectCardView()
+//    }
+//}
