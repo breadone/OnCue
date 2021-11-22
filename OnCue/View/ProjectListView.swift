@@ -19,32 +19,35 @@ struct ProjectListView: View {
     
     var body: some View {
         NavigationView {
-            ScrollView {
-                ForEach(sortedList, id: \.id) { proj in
-                    ProjectCardView(project: proj)
-                        .padding(.vertical, 5)
-                        .padding(.horizontal)
-                        .contextMenu {
-                            Button(action: {self.removeProject(proj.id)}) {
-                                Text("Delete")
-                                Image(systemName: "trash")
+            GeometryReader { geo in
+                ScrollView {
+                    ForEach(sortedList, id: \.id) { proj in
+                        ProjectCardView(project: proj)
+                            .frame(height: geo.size.height / 5)
+                            .padding(.vertical, 5)
+                            .padding(.horizontal, geo.size.width / 23)
+                            .contextMenu {
+                                Button(action: {self.removeProject(proj.id)}) {
+                                    Text("Delete")
+                                    Image(systemName: "trash")
+                                }
                             }
+                    }
+                }
+                .navigationTitle("Projects")
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        Button("add test") {
+                            self.projectList.append(Project(name: "sample project",
+                                                            cards: [Card(0, text: "card one"), Card(1, text: "card two")]))
                         }
-                }
+                    }
+                    ToolbarItem(placement: .navigationBarLeading) {
+                        Button("clear tests") {
+                            self.projectList = []
+                        }
+                    }
             }
-            .navigationTitle("Projects")
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button("add test") {
-                        self.projectList.append(Project(name: "sample project",
-                                                        cards: [Card(0, text: "card one"), Card(1, text: "card two")]))
-                    }
-                }
-                ToolbarItem(placement: .navigationBarLeading) {
-                    Button("clear tests") {
-                        self.projectList = []
-                    }
-                }
             }
         }
     }

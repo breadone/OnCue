@@ -9,8 +9,6 @@ import SwiftUI
 
 struct ProjectCardView: View {
     var project: Project = Project(name: "sample project")
-    var width: Double = 320
-    var height: Double = 150
     var bgColour: Color = .accentColor
     var grad = Gradient(colors: [.accentColor, .white])
     
@@ -30,7 +28,7 @@ struct ProjectCardView: View {
             }
         }
         .padding()
-        .frame(width: self.width, height: self.height, alignment: .center)
+//        .frame(width: self.width, height: self.height, alignment: .center)
         .background(bgColour)
         .cornerRadius(17)
         .shadow(color: bgColour, radius: 6, x: 0, y: 0)
