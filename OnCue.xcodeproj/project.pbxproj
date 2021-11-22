@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4652FD87274BA6A4009BE526 /* CardListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4652FD86274BA6A4009BE526 /* CardListView.swift */; };
+		4652FD89274BB463009BE526 /* SingleCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4652FD88274BB463009BE526 /* SingleCardView.swift */; };
 		46F6116D274733B400708686 /* OnCueApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F6116C274733B400708686 /* OnCueApp.swift */; };
 		46F6116F274733B400708686 /* ProjectListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F6116E274733B400708686 /* ProjectListView.swift */; };
 		46F61171274733B500708686 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46F61170274733B500708686 /* Assets.xcassets */; };
@@ -23,7 +24,7 @@
 		46F611AB2747370500708686 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F611A92747370500708686 /* Project.swift */; };
 		46F611AE274737A900708686 /* DefaultsConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F611AD274737A900708686 /* DefaultsConfig.swift */; };
 		46F611AF274737A900708686 /* DefaultsConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F611AD274737A900708686 /* DefaultsConfig.swift */; };
-		46F611B1274774D900708686 /* ProjectCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F611B0274774D900708686 /* ProjectCardView.swift */; };
+		46F611B1274774D900708686 /* SingleProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F611B0274774D900708686 /* SingleProjectView.swift */; };
 		46F611B22747784A00708686 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46F61170274733B500708686 /* Assets.xcassets */; };
 		46F611B52747789E00708686 /* ExtensionColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F611B42747789E00708686 /* ExtensionColor.swift */; };
 /* End PBXBuildFile section */
@@ -43,6 +44,7 @@
 
 /* Begin PBXFileReference section */
 		4652FD86274BA6A4009BE526 /* CardListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListView.swift; sourceTree = "<group>"; };
+		4652FD88274BB463009BE526 /* SingleCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleCardView.swift; sourceTree = "<group>"; };
 		46F61169274733B400708686 /* OnCue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnCue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46F6116C274733B400708686 /* OnCueApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnCueApp.swift; sourceTree = "<group>"; };
 		46F6116E274733B400708686 /* ProjectListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectListView.swift; sourceTree = "<group>"; };
@@ -57,7 +59,7 @@
 		46F611A32747369200708686 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		46F611A92747370500708686 /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
 		46F611AD274737A900708686 /* DefaultsConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultsConfig.swift; sourceTree = "<group>"; };
-		46F611B0274774D900708686 /* ProjectCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectCardView.swift; sourceTree = "<group>"; };
+		46F611B0274774D900708686 /* SingleProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleProjectView.swift; sourceTree = "<group>"; };
 		46F611B42747789E00708686 /* ExtensionColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -123,8 +125,9 @@
 			isa = PBXGroup;
 			children = (
 				46F6116E274733B400708686 /* ProjectListView.swift */,
-				46F611B0274774D900708686 /* ProjectCardView.swift */,
+				46F611B0274774D900708686 /* SingleProjectView.swift */,
 				4652FD86274BA6A4009BE526 /* CardListView.swift */,
+				4652FD88274BB463009BE526 /* SingleCardView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -294,11 +297,12 @@
 				46F6116F274733B400708686 /* ProjectListView.swift in Sources */,
 				46F611A42747369200708686 /* Card.swift in Sources */,
 				46F611B52747789E00708686 /* ExtensionColor.swift in Sources */,
-				46F611B1274774D900708686 /* ProjectCardView.swift in Sources */,
+				46F611B1274774D900708686 /* SingleProjectView.swift in Sources */,
 				46F6116D274733B400708686 /* OnCueApp.swift in Sources */,
 				46F611AA2747370500708686 /* Project.swift in Sources */,
 				4652FD87274BA6A4009BE526 /* CardListView.swift in Sources */,
 				46F611AE274737A900708686 /* DefaultsConfig.swift in Sources */,
+				4652FD89274BB463009BE526 /* SingleCardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

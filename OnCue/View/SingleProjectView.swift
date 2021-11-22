@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ProjectCardView: View {
-    var project: Project = Project(name: "sample project")
+    var project: Project = Project.testProject
     var bgColour: Color = .accentColor
     
     var body: some View {
@@ -31,7 +31,7 @@ struct ProjectCardView: View {
                             .padding(5)
                             .frame(width: 65, height: 55, alignment: .topLeading)
                             .background(Color(white: 1, opacity: 0.25))
-                            .cornerRadius(13)
+                            .cornerRadius(11)
                     }
                 } else {
                     ForEach(0..<4) { i in
@@ -41,7 +41,7 @@ struct ProjectCardView: View {
                             .padding(5)
                             .frame(width: 65, height: 55, alignment: .topLeading)
                             .background(Color(white: 1, opacity: 0.25))
-                            .cornerRadius(13)
+                            .cornerRadius(11)
                     }
                     Image(systemName: "ellipsis").foregroundColor(.white)
                 }

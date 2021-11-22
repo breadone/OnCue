@@ -13,14 +13,17 @@ struct CardListView: View {
     var body: some View {
         ScrollView {
             ForEach(self.project.cards, id: \.id) { card in
-                Text(card.text)
+                SingleCardView(card: card)
             }
         }
+        .navigationTitle(project.name)
     }
 }
 
 struct CardListView_Previews: PreviewProvider {
     static var previews: some View {
-        CardListView(project: Project.testProject)
+        NavigationView {
+            CardListView(project: Project.testProject)
+        }
     }
 }
