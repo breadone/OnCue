@@ -22,24 +22,26 @@ struct ProjectListView: View {
             GeometryReader { geo in
                 ScrollView {
                     ForEach(sortedList, id: \.id) { proj in
-                        ProjectCardView(project: proj)
-                            .padding(.vertical, geo.size.height / 75)
-                            .padding(.horizontal, geo.size.width / 23)
-                            .frame(height: geo.size.height / 6)
-                            .contextMenu {
-                                Button(action: {self.removeProject(proj.id)}) {
-                                    Text("Delete")
-                                    Image(systemName: "trash")
-                                }
+                        NavigationLink(destination: CardListView(project: proj)) {
+                            ProjectCardView(project: proj)
+//                                .frame(width: geo.size.width, height: geo.size.height / 7)
+                        }
+                        .contextMenu {
+                            Button(action: {self.removeProject(proj.id)}) {
+                                Text("Delete")
+                                Image(systemName: "trash")
                             }
+                        }
+                        .padding(.vertical, geo.size.height / 170)
+                        .padding(.horizontal, geo.size.width / 23)
                     }
                 }
+            }
                 .navigationTitle("Projects")
                 .toolbar {
                     ToolbarItemGroup(placement: .navigationBarTrailing) {
                         Button("add test") {
-                            self.projectList.append(Project(name: "sample project",
-                                                            cards: [Card(0, text: "card one"), Card(1, text: "card two")]))
+                            self.projectList.append(Project.testProject)
                         }
                         Button("add cards") {
                             self.projectList[0].cards.append(Card(2, text: "wha"))
@@ -50,8 +52,8 @@ struct ProjectListView: View {
                             self.projectList = []
                         }
                     }
-            }
-            }
+                }
+//            }
         }
     }
 }

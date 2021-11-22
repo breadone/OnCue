@@ -21,3 +21,7 @@ struct Project: Codable, Identifiable, DefaultsSerializable {
         self.dateCreated = Date()
     }
 }
+
+extension Project {
+    static let testProject = Project(name: "Test Project", cards: [Card(0, text: "card one"), Card(1, text: "card two")])
+}

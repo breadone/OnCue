@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4652FD87274BA6A4009BE526 /* CardListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4652FD86274BA6A4009BE526 /* CardListView.swift */; };
 		46F6116D274733B400708686 /* OnCueApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F6116C274733B400708686 /* OnCueApp.swift */; };
 		46F6116F274733B400708686 /* ProjectListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F6116E274733B400708686 /* ProjectListView.swift */; };
 		46F61171274733B500708686 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46F61170274733B500708686 /* Assets.xcassets */; };
@@ -41,6 +42,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4652FD86274BA6A4009BE526 /* CardListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListView.swift; sourceTree = "<group>"; };
 		46F61169274733B400708686 /* OnCue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnCue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46F6116C274733B400708686 /* OnCueApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnCueApp.swift; sourceTree = "<group>"; };
 		46F6116E274733B400708686 /* ProjectListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectListView.swift; sourceTree = "<group>"; };
@@ -83,7 +85,7 @@
 			children = (
 				46F611A12747366B00708686 /* Shared */,
 				46F6116B274733B400708686 /* OnCue */,
-				46F61189274733FE00708686 /* WatchPresenter WatchKit Extension */,
+				46F61189274733FE00708686 /* WatchPresenter */,
 				46F6116A274733B400708686 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -122,11 +124,12 @@
 			children = (
 				46F6116E274733B400708686 /* ProjectListView.swift */,
 				46F611B0274774D900708686 /* ProjectCardView.swift */,
+				4652FD86274BA6A4009BE526 /* CardListView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		46F61189274733FE00708686 /* WatchPresenter WatchKit Extension */ = {
+		46F61189274733FE00708686 /* WatchPresenter */ = {
 			isa = PBXGroup;
 			children = (
 				46F6118C274733FE00708686 /* OnCueWatchApp.swift */,
@@ -135,7 +138,7 @@
 				46F61195274733FE00708686 /* Info.plist */,
 				46F61192274733FE00708686 /* Preview Content */,
 			);
-			path = "WatchPresenter WatchKit Extension";
+			path = WatchPresenter;
 			sourceTree = "<group>";
 		};
 		46F61192274733FE00708686 /* Preview Content */ = {
@@ -294,6 +297,7 @@
 				46F611B1274774D900708686 /* ProjectCardView.swift in Sources */,
 				46F6116D274733B400708686 /* OnCueApp.swift in Sources */,
 				46F611AA2747370500708686 /* Project.swift in Sources */,
+				4652FD87274BA6A4009BE526 /* CardListView.swift in Sources */,
 				46F611AE274737A900708686 /* DefaultsConfig.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

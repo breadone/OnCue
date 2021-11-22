@@ -23,11 +23,27 @@ struct ProjectCardView: View {
                     .foregroundColor(.white)
             }
             HStack {
-                ForEach(self.project.cards, id: \.id) { card in
-                    Text(card.text)
-                        .padding()
-                        .background(Color(white: 1, opacity: 0.25))
-                        .cornerRadius(13)
+                if self.project.cards.capacity <= 5 {
+                    ForEach(self.project.cards, id: \.id) { card in
+                        Text(card.text)
+                            .font(.system(size: 14))
+                            .foregroundColor(.white)
+                            .padding(5)
+                            .frame(width: 65, height: 55, alignment: .topLeading)
+                            .background(Color(white: 1, opacity: 0.25))
+                            .cornerRadius(13)
+                    }
+                } else {
+                    ForEach(0..<4) { i in
+                        Text(self.project.cards[i].text)
+                            .font(.system(size: 14))
+                            .foregroundColor(.white)
+                            .padding(5)
+                            .frame(width: 65, height: 55, alignment: .topLeading)
+                            .background(Color(white: 1, opacity: 0.25))
+                            .cornerRadius(13)
+                    }
+                    Image(systemName: "ellipsis").foregroundColor(.white)
                 }
             }
         }
