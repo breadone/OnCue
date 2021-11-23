@@ -28,25 +28,30 @@ struct AddCardView: View {
     }
     
     var body: some View {
-        Form {
-            Section(header: Text("Text")) {
-                TextEditor(text: $text)
-            }
-        }
-        .navigationTitle("Add Card")
-        .toolbar {
-            ToolbarItem(placement: .navigationBarTrailing) {
-                Button("Save") {
-                    self.projectList[project].cards.append(Card(lastCard, text: text))
-                    dismiss.callAsFunction()
+        GeometryReader { geo in
+            Form {
+                Section(header: Text("Text")) {
+                    TextEditor(text: $text)
+                        .frame(minHeight: geo.size.height * 0.75)
                 }
             }
+            .navigationTitle("Add Card")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button("Save") {
+                        self.projectList[project].cards.append(Card(lastCard, text: text))
+                        dismiss.callAsFunction()
+                    }
+                }
+        }
         }
     }
 }
 
-//struct AddCardView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        AddCardView()
-//    }
-//}
+struct AddCardView_Previews: PreviewProvider {
+    static var previews: some View {
+        NavigationView {
+            AddCardView(projectID: Project.testProject.id)
+        }
+    }
+}

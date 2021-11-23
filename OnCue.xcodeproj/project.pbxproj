@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4609EA80274CFF2E00F3BB48 /* AddProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4609EA7F274CFF2E00F3BB48 /* AddProjectView.swift */; };
 		4609EA82274D022800F3BB48 /* AddCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4609EA81274D022800F3BB48 /* AddCardView.swift */; };
+		4609EA86274D0BA700F3BB48 /* PhoneConnectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4609EA85274D0BA700F3BB48 /* PhoneConnectivity.swift */; };
 		4652FD87274BA6A4009BE526 /* CardListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4652FD86274BA6A4009BE526 /* CardListView.swift */; };
 		4652FD89274BB463009BE526 /* SingleCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4652FD88274BB463009BE526 /* SingleCardView.swift */; };
 		46F6116D274733B400708686 /* OnCueApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F6116C274733B400708686 /* OnCueApp.swift */; };
@@ -47,6 +48,7 @@
 /* Begin PBXFileReference section */
 		4609EA7F274CFF2E00F3BB48 /* AddProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProjectView.swift; sourceTree = "<group>"; };
 		4609EA81274D022800F3BB48 /* AddCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCardView.swift; sourceTree = "<group>"; };
+		4609EA85274D0BA700F3BB48 /* PhoneConnectivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneConnectivity.swift; sourceTree = "<group>"; };
 		4652FD86274BA6A4009BE526 /* CardListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListView.swift; sourceTree = "<group>"; };
 		4652FD88274BB463009BE526 /* SingleCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleCardView.swift; sourceTree = "<group>"; };
 		46F61169274733B400708686 /* OnCue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnCue.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,6 +88,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4609EA87274D0BAA00F3BB48 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4609EA85274D0BA700F3BB48 /* PhoneConnectivity.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		46F61160274733B400708686 = {
 			isa = PBXGroup;
 			children = (
@@ -110,6 +120,7 @@
 			children = (
 				46F6116C274733B400708686 /* OnCueApp.swift */,
 				46F6117A274733C200708686 /* View */,
+				4609EA87274D0BAA00F3BB48 /* Model */,
 				46F611B32747788800708686 /* Util */,
 				46F61170274733B500708686 /* Assets.xcassets */,
 				46F61172274733B500708686 /* Preview Content */,
@@ -303,6 +314,7 @@
 				4609EA80274CFF2E00F3BB48 /* AddProjectView.swift in Sources */,
 				46F6116F274733B400708686 /* ProjectListView.swift in Sources */,
 				46F611A42747369200708686 /* Card.swift in Sources */,
+				4609EA86274D0BA700F3BB48 /* PhoneConnectivity.swift in Sources */,
 				4609EA82274D022800F3BB48 /* AddCardView.swift in Sources */,
 				46F611B52747789E00708686 /* ExtensionColor.swift in Sources */,
 				46F611B1274774D900708686 /* SingleProjectView.swift in Sources */,

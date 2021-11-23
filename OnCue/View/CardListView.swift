@@ -42,6 +42,15 @@ struct CardListView: View {
     }
 }
 
+extension CardListView {
+    func pushToWatch() {
+        let encoder = PropertyListEncoder()
+        let data = try? encoder.encode(self.project)
+        // TODO: implement error handling
+        PhoneConnectivity.shared.session.sendMessage(["project": data as Any], replyHandler: nil)
+    }
+}
+
 struct CardListView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
