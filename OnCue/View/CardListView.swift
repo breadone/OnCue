@@ -6,9 +6,11 @@
 //
 
 import SwiftUI
-// TODO: implement drag and drop cards
+// TODO: implement drag and drop to reorder cards
 struct CardListView: View {
+    @State private var showingAddScreen = false
     var project: Project
+    
     let columns = [GridItem(.flexible(minimum: 100)), GridItem(.flexible(minimum: 100))]
     
     var body: some View {
@@ -24,6 +26,19 @@ struct CardListView: View {
             }
         }
         .navigationTitle(project.name)
+        .toolbar {
+            ToolbarItemGroup(placement: .navigationBarTrailing) {
+                Button(action: {self.showingAddScreen.toggle()}) {
+                    Image(systemName: "plus")
+                }
+                Button(action: {}) {
+                    Image(systemName: "play.fill")
+                }
+            }
+        }
+        .sheet(isPresented: $showingAddScreen) {
+            NavigationView { AddCardView(projectID: self.project.id) }
+        }
     }
 }
 

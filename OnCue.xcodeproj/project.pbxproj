@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4609EA80274CFF2E00F3BB48 /* AddProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4609EA7F274CFF2E00F3BB48 /* AddProjectView.swift */; };
+		4609EA82274D022800F3BB48 /* AddCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4609EA81274D022800F3BB48 /* AddCardView.swift */; };
 		4652FD87274BA6A4009BE526 /* CardListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4652FD86274BA6A4009BE526 /* CardListView.swift */; };
 		4652FD89274BB463009BE526 /* SingleCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4652FD88274BB463009BE526 /* SingleCardView.swift */; };
 		46F6116D274733B400708686 /* OnCueApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F6116C274733B400708686 /* OnCueApp.swift */; };
@@ -43,6 +45,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4609EA7F274CFF2E00F3BB48 /* AddProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProjectView.swift; sourceTree = "<group>"; };
+		4609EA81274D022800F3BB48 /* AddCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCardView.swift; sourceTree = "<group>"; };
 		4652FD86274BA6A4009BE526 /* CardListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListView.swift; sourceTree = "<group>"; };
 		4652FD88274BB463009BE526 /* SingleCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleCardView.swift; sourceTree = "<group>"; };
 		46F61169274733B400708686 /* OnCue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnCue.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -125,8 +129,10 @@
 			isa = PBXGroup;
 			children = (
 				46F6116E274733B400708686 /* ProjectListView.swift */,
+				4609EA7F274CFF2E00F3BB48 /* AddProjectView.swift */,
 				46F611B0274774D900708686 /* SingleProjectView.swift */,
 				4652FD86274BA6A4009BE526 /* CardListView.swift */,
+				4609EA81274D022800F3BB48 /* AddCardView.swift */,
 				4652FD88274BB463009BE526 /* SingleCardView.swift */,
 			);
 			path = View;
@@ -294,8 +300,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4609EA80274CFF2E00F3BB48 /* AddProjectView.swift in Sources */,
 				46F6116F274733B400708686 /* ProjectListView.swift in Sources */,
 				46F611A42747369200708686 /* Card.swift in Sources */,
+				4609EA82274D022800F3BB48 /* AddCardView.swift in Sources */,
 				46F611B52747789E00708686 /* ExtensionColor.swift in Sources */,
 				46F611B1274774D900708686 /* SingleProjectView.swift in Sources */,
 				46F6116D274733B400708686 /* OnCueApp.swift in Sources */,

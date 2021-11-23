@@ -9,6 +9,8 @@ import SwiftUI
 import Defaults
 
 struct ProjectListView: View {
+    @State private var showingAddScreen = false
+    
     @Default(.projects) private var projectList
     
     private var sortedList: [Project] { // sorts projects by date created
@@ -36,23 +38,17 @@ struct ProjectListView: View {
                     }
                 }
             }
-                .navigationTitle("Projects")
-                .toolbar {
-                    ToolbarItemGroup(placement: .navigationBarTrailing) {
-                        Button("add test") {
-                            self.projectList.append(Project.testProject)
-                        }
-                        Button("add cards") {
-                            self.projectList[0].cards.append(Card(2, text: "wha"))
-                        }
-                    }
-                    ToolbarItem(placement: .navigationBarLeading) {
-                        Button("clear tests") {
-                            self.projectList = []
-                        }
+            .navigationTitle("Projects")
+            .toolbar {
+                ToolbarItemGroup(placement: .navigationBarTrailing) {
+                    Button(action: {self.showingAddScreen.toggle()}) {
+                        Image(systemName: "plus")
                     }
                 }
-//            }
+            }
+            .sheet(isPresented: $showingAddScreen) {
+                NavigationView { AddProjectView() }
+            }
         }
     }
 }
