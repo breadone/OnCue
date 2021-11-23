@@ -6,14 +6,21 @@
 //
 
 import SwiftUI
-
+// TODO: implement drag and drop cards
 struct CardListView: View {
     var project: Project
+    let columns = [GridItem(.flexible(minimum: 100)), GridItem(.flexible(minimum: 100))]
     
     var body: some View {
-        ScrollView {
-            ForEach(self.project.cards, id: \.id) { card in
-                SingleCardView(card: card)
+        GeometryReader { geo in
+            ScrollView {
+                LazyVGrid(columns: columns, spacing: 20) {
+                    ForEach(self.project.cards, id: \.id) { card in
+                        SingleCardView(card: card)
+                            .padding(.vertical, geo.size.height / 170)
+                            .padding(.horizontal, geo.size.width / 45)
+                    }
+                }
             }
         }
         .navigationTitle(project.name)

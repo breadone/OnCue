@@ -24,7 +24,6 @@ struct ProjectListView: View {
                     ForEach(sortedList, id: \.id) { proj in
                         NavigationLink(destination: CardListView(project: proj)) {
                             ProjectCardView(project: proj)
-//                                .frame(width: geo.size.width, height: geo.size.height / 7)
                         }
                         .contextMenu {
                             Button(action: {self.removeProject(proj.id)}) {
@@ -33,7 +32,7 @@ struct ProjectListView: View {
                             }
                         }
                         .padding(.vertical, geo.size.height / 170)
-                        .padding(.horizontal, geo.size.width / 23)
+                        .padding(.horizontal, geo.size.width / 30)
                     }
                 }
             }
