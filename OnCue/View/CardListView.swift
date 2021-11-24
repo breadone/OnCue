@@ -31,7 +31,7 @@ struct CardListView: View {
                 Button(action: {self.showingAddScreen.toggle()}) {
                     Image(systemName: "plus")
                 }
-                Button(action: {}) {
+                Button(action: pushToWatch) {
                     Image(systemName: "play.fill")
                 }
             }
@@ -47,7 +47,7 @@ extension CardListView {
         let encoder = PropertyListEncoder()
         let data = try? encoder.encode(self.project)
         // TODO: implement error handling
-        PhoneConnectivity.shared.session.sendMessage(["project": data as Any], replyHandler: nil)
+        PhoneConnectivityModel.shared.session.sendMessage(["project": data as Any], replyHandler: nil)
     }
 }
 

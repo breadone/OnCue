@@ -4,6 +4,25 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>OnCue Presenter (Complication).xcscheme_^#shared#^_</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>OnCue Presenter (Notification).xcscheme_^#shared#^_</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>OnCue Presenter.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>OnCue.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
@@ -14,10 +33,23 @@
 			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
-		<key>WatchPresenter.xcscheme_^#shared#^_</key>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>4615DF7A274E00BF00C9DB98</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>1</integer>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>46F61168274733B400708686</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>46F61184274733FE00708686</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

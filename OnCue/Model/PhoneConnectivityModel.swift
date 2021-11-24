@@ -1,5 +1,5 @@
 //
-//  PhoneConnectivity.swift
+//  PhoneConnectivityModel.swift
 //  OnCue
 //
 //  Created by Pradyun Setti on 24/11/21.
@@ -8,8 +8,8 @@
 import Foundation
 import WatchConnectivity
 
-class PhoneConnectivity: NSObject, WCSessionDelegate {
-    static let shared = PhoneConnectivity()
+class PhoneConnectivityModel: NSObject, WCSessionDelegate {
+    static let shared = PhoneConnectivityModel()
     
     var session: WCSession
     
