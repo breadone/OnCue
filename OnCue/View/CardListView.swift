@@ -80,6 +80,7 @@ struct CardListView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
             CardListView(project: Project.testProject)
+                .preferredColorScheme(.dark)
         }
     }
 }

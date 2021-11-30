@@ -9,6 +9,7 @@ import SwiftUI
 
 struct PresentationViewPhone: View {
     @Environment(\.colorScheme) var cs
+    @Environment(\.dismiss) var dismiss
     
     let project: Project
     let lightModeColour = Color(white: 0.94, opacity: 1)
@@ -28,8 +29,8 @@ struct PresentationViewPhone: View {
                                 .font(.system(size: 25, weight: .medium, design: .default))
                         }
                         .padding()
-                        .frame(width: geo.size.width * 0.95,
-                               height: geo.size.height,// * 0.8,
+                        .frame(width: geo.size.width * 0.96,
+                               height: geo.size.height,// * 0.98,
                                alignment: .topLeading)
                         .background(cs == .dark ? darkModeColour : lightModeColour)
                         .cornerRadius(17)
@@ -39,6 +40,15 @@ struct PresentationViewPhone: View {
             }
         }
         .navigationTitle(self.project.name).navigationBarTitleDisplayMode(.inline)
+        .navigationBarBackButtonHidden(true)
+        .toolbar {
+            ToolbarItem(placement: .navigationBarLeading) {
+                Button { dismiss.callAsFunction() } label: {
+                    Image(systemName: "chevron.backward")
+                }
+
+            }
+        }
     }
 }
 
@@ -46,7 +56,7 @@ struct PresentationViewPhone_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
             PresentationViewPhone(project: Project.testProject)
-//                            .preferredColorScheme(.dark)
+                            .preferredColorScheme(.dark)
         }
     }
 }
