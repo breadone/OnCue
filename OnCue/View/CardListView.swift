@@ -28,12 +28,13 @@ struct CardListView: View {
                         SingleCardView(card: card)
                             .padding(.vertical, geo.size.height / 170)
                             .padding(.horizontal, geo.size.width / 45)
-                        
-                        NavigationLink("", isActive: $presenting) {
-                            PresentationViewPhone(project: project)
-                                .preferredColorScheme(.dark)
-                        }
                     }
+                }
+                
+                NavigationLink(isActive: $presenting) {
+                    PresentationViewPhone(project: project)
+                } label: {
+                    EmptyView()
                 }
             }
         }
