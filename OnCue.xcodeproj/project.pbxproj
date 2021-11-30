@@ -9,36 +9,72 @@
 /* Begin PBXBuildFile section */
 		4609EA80274CFF2E00F3BB48 /* AddProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4609EA7F274CFF2E00F3BB48 /* AddProjectView.swift */; };
 		4609EA82274D022800F3BB48 /* AddCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4609EA81274D022800F3BB48 /* AddCardView.swift */; };
-		4609EA86274D0BA700F3BB48 /* PhoneConnectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4609EA85274D0BA700F3BB48 /* PhoneConnectivity.swift */; };
+		4609EA86274D0BA700F3BB48 /* PhoneConnectivityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4609EA85274D0BA700F3BB48 /* PhoneConnectivityModel.swift */; };
+		4615DF84274E00C000C9DB98 /* OnCue Presenter WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 4615DF83274E00C000C9DB98 /* OnCue Presenter WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		4615DF8D274E00C000C9DB98 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4615DF8C274E00C000C9DB98 /* NotificationController.swift */; };
+		4615DF8F274E00C000C9DB98 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4615DF8E274E00C000C9DB98 /* NotificationView.swift */; };
+		4615DF93274E00C000C9DB98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4615DF92274E00C000C9DB98 /* Assets.xcassets */; };
+		4615DF96274E00C000C9DB98 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4615DF95274E00C000C9DB98 /* Preview Assets.xcassets */; };
+		4615DF9B274E00C000C9DB98 /* OnCue Presenter.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 4615DF7B274E00BF00C9DB98 /* OnCue Presenter.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		4615DFA3274E00E600C9DB98 /* OnCueWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F6118C274733FE00708686 /* OnCueWatchApp.swift */; };
+		4615DFA4274E00E900C9DB98 /* PresentationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F6118A274733FE00708686 /* PresentationView.swift */; };
+		4615DFA7274E030B00C9DB98 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F611A32747369200708686 /* Card.swift */; };
+		4615DFA8274E030D00C9DB98 /* DefaultsConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F611AD274737A900708686 /* DefaultsConfig.swift */; };
+		4615DFA9274E030D00C9DB98 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F611A92747370500708686 /* Project.swift */; };
+		4615DFAB274E03D200C9DB98 /* Defaults in Frameworks */ = {isa = PBXBuildFile; productRef = 4615DFAA274E03D200C9DB98 /* Defaults */; };
+		4615DFAD274E04F000C9DB98 /* WatchConnectivityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4615DFAC274E04F000C9DB98 /* WatchConnectivityModel.swift */; };
 		4652FD87274BA6A4009BE526 /* CardListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4652FD86274BA6A4009BE526 /* CardListView.swift */; };
 		4652FD89274BB463009BE526 /* SingleCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4652FD88274BB463009BE526 /* SingleCardView.swift */; };
+		46C94EF927545D5D0038A930 /* PreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C94EF827545D5D0038A930 /* PreferencesView.swift */; };
+		46C94EFB2755E0C10038A930 /* PresentationViewPhone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C94EFA2755E0C10038A930 /* PresentationViewPhone.swift */; };
 		46F6116D274733B400708686 /* OnCueApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F6116C274733B400708686 /* OnCueApp.swift */; };
 		46F6116F274733B400708686 /* ProjectListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F6116E274733B400708686 /* ProjectListView.swift */; };
 		46F61171274733B500708686 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46F61170274733B500708686 /* Assets.xcassets */; };
 		46F61174274733B500708686 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46F61173274733B500708686 /* Preview Assets.xcassets */; };
-		46F6118B274733FE00708686 /* PresentationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F6118A274733FE00708686 /* PresentationView.swift */; };
-		46F6118D274733FE00708686 /* OnCueWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F6118C274733FE00708686 /* OnCueWatchApp.swift */; };
-		46F61191274733FE00708686 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46F61190274733FE00708686 /* Assets.xcassets */; };
-		46F61194274733FE00708686 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46F61193274733FE00708686 /* Preview Assets.xcassets */; };
 		46F611A42747369200708686 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F611A32747369200708686 /* Card.swift */; };
 		46F611A7274736AA00708686 /* Defaults in Frameworks */ = {isa = PBXBuildFile; productRef = 46F611A6274736AA00708686 /* Defaults */; };
-		46F611A8274736BD00708686 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F611A32747369200708686 /* Card.swift */; };
 		46F611AA2747370500708686 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F611A92747370500708686 /* Project.swift */; };
-		46F611AB2747370500708686 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F611A92747370500708686 /* Project.swift */; };
 		46F611AE274737A900708686 /* DefaultsConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F611AD274737A900708686 /* DefaultsConfig.swift */; };
-		46F611AF274737A900708686 /* DefaultsConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F611AD274737A900708686 /* DefaultsConfig.swift */; };
 		46F611B1274774D900708686 /* SingleProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F611B0274774D900708686 /* SingleProjectView.swift */; };
-		46F611B22747784A00708686 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46F61170274733B500708686 /* Assets.xcassets */; };
 		46F611B52747789E00708686 /* ExtensionColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F611B42747789E00708686 /* ExtensionColor.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		4615DF85274E00C000C9DB98 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 46F61161274733B400708686 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4615DF82274E00C000C9DB98;
+			remoteInfo = "OnCue Presenter WatchKit Extension";
+		};
+		4615DF99274E00C000C9DB98 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 46F61161274733B400708686 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4615DF7A274E00BF00C9DB98;
+			remoteInfo = "OnCue Presenter";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
+		4615DF9F274E00C000C9DB98 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				4615DF84274E00C000C9DB98 /* OnCue Presenter WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		46F611A0274733FE00708686 /* Embed Watch Content */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
+				4615DF9B274E00C000C9DB98 /* OnCue Presenter.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -48,20 +84,26 @@
 /* Begin PBXFileReference section */
 		4609EA7F274CFF2E00F3BB48 /* AddProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProjectView.swift; sourceTree = "<group>"; };
 		4609EA81274D022800F3BB48 /* AddCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCardView.swift; sourceTree = "<group>"; };
-		4609EA85274D0BA700F3BB48 /* PhoneConnectivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneConnectivity.swift; sourceTree = "<group>"; };
+		4609EA85274D0BA700F3BB48 /* PhoneConnectivityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneConnectivityModel.swift; sourceTree = "<group>"; };
+		4615DF7B274E00BF00C9DB98 /* OnCue Presenter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OnCue Presenter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4615DF83274E00C000C9DB98 /* OnCue Presenter WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "OnCue Presenter WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4615DF8C274E00C000C9DB98 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		4615DF8E274E00C000C9DB98 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		4615DF92274E00C000C9DB98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4615DF95274E00C000C9DB98 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4615DF97274E00C000C9DB98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4615DFAC274E04F000C9DB98 /* WatchConnectivityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchConnectivityModel.swift; sourceTree = "<group>"; };
 		4652FD86274BA6A4009BE526 /* CardListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListView.swift; sourceTree = "<group>"; };
 		4652FD88274BB463009BE526 /* SingleCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleCardView.swift; sourceTree = "<group>"; };
+		46C94EF827545D5D0038A930 /* PreferencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesView.swift; sourceTree = "<group>"; };
+		46C94EFA2755E0C10038A930 /* PresentationViewPhone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationViewPhone.swift; sourceTree = "<group>"; };
 		46F61169274733B400708686 /* OnCue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnCue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46F6116C274733B400708686 /* OnCueApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnCueApp.swift; sourceTree = "<group>"; };
 		46F6116E274733B400708686 /* ProjectListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectListView.swift; sourceTree = "<group>"; };
 		46F61170274733B500708686 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		46F61173274733B500708686 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		46F61185274733FE00708686 /* WatchPresenter Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "WatchPresenter Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		46F6118A274733FE00708686 /* PresentationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationView.swift; sourceTree = "<group>"; };
 		46F6118C274733FE00708686 /* OnCueWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnCueWatchApp.swift; sourceTree = "<group>"; };
-		46F61190274733FE00708686 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		46F61193274733FE00708686 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		46F61195274733FE00708686 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		46F611A32747369200708686 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		46F611A92747370500708686 /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
 		46F611AD274737A900708686 /* DefaultsConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultsConfig.swift; sourceTree = "<group>"; };
@@ -70,18 +112,19 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		4615DF80274E00C000C9DB98 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4615DFAB274E03D200C9DB98 /* Defaults in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		46F61166274733B400708686 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				46F611A7274736AA00708686 /* Defaults in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		46F61182274733FE00708686 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,7 +134,45 @@
 		4609EA87274D0BAA00F3BB48 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				4609EA85274D0BA700F3BB48 /* PhoneConnectivity.swift */,
+				4609EA85274D0BA700F3BB48 /* PhoneConnectivityModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4609EA8A274D109F00F3BB48 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4615DF87274E00C000C9DB98 /* OnCue Presenter WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				46F6118C274733FE00708686 /* OnCueWatchApp.swift */,
+				46F611AC2747375000708686 /* View */,
+				4615DFAE274E04FF00C9DB98 /* Model */,
+				4615DF8C274E00C000C9DB98 /* NotificationController.swift */,
+				4615DF8E274E00C000C9DB98 /* NotificationView.swift */,
+				4615DF92274E00C000C9DB98 /* Assets.xcassets */,
+				4615DF97274E00C000C9DB98 /* Info.plist */,
+				4615DF94274E00C000C9DB98 /* Preview Content */,
+			);
+			path = "OnCue Presenter WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		4615DF94274E00C000C9DB98 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				4615DF95274E00C000C9DB98 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4615DFAE274E04FF00C9DB98 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4615DFAC274E04F000C9DB98 /* WatchConnectivityModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -101,8 +182,9 @@
 			children = (
 				46F611A12747366B00708686 /* Shared */,
 				46F6116B274733B400708686 /* OnCue */,
-				46F61189274733FE00708686 /* WatchPresenter */,
+				4615DF87274E00C000C9DB98 /* OnCue Presenter WatchKit Extension */,
 				46F6116A274733B400708686 /* Products */,
+				4609EA8A274D109F00F3BB48 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -110,7 +192,8 @@
 			isa = PBXGroup;
 			children = (
 				46F61169274733B400708686 /* OnCue.app */,
-				46F61185274733FE00708686 /* WatchPresenter Extension.appex */,
+				4615DF7B274E00BF00C9DB98 /* OnCue Presenter.app */,
+				4615DF83274E00C000C9DB98 /* OnCue Presenter WatchKit Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -139,34 +222,16 @@
 		46F6117A274733C200708686 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				46C94EF827545D5D0038A930 /* PreferencesView.swift */,
 				46F6116E274733B400708686 /* ProjectListView.swift */,
 				4609EA7F274CFF2E00F3BB48 /* AddProjectView.swift */,
 				46F611B0274774D900708686 /* SingleProjectView.swift */,
 				4652FD86274BA6A4009BE526 /* CardListView.swift */,
 				4609EA81274D022800F3BB48 /* AddCardView.swift */,
 				4652FD88274BB463009BE526 /* SingleCardView.swift */,
+				46C94EFA2755E0C10038A930 /* PresentationViewPhone.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		46F61189274733FE00708686 /* WatchPresenter */ = {
-			isa = PBXGroup;
-			children = (
-				46F6118C274733FE00708686 /* OnCueWatchApp.swift */,
-				46F611AC2747375000708686 /* View */,
-				46F61190274733FE00708686 /* Assets.xcassets */,
-				46F61195274733FE00708686 /* Info.plist */,
-				46F61192274733FE00708686 /* Preview Content */,
-			);
-			path = WatchPresenter;
-			sourceTree = "<group>";
-		};
-		46F61192274733FE00708686 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				46F61193274733FE00708686 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		46F611A12747366B00708686 /* Shared */ = {
@@ -206,6 +271,43 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		4615DF7A274E00BF00C9DB98 /* OnCue Presenter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4615DFA0274E00C000C9DB98 /* Build configuration list for PBXNativeTarget "OnCue Presenter" */;
+			buildPhases = (
+				4615DF79274E00BF00C9DB98 /* Resources */,
+				4615DF9F274E00C000C9DB98 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4615DF86274E00C000C9DB98 /* PBXTargetDependency */,
+			);
+			name = "OnCue Presenter";
+			productName = "OnCue Presenter";
+			productReference = 4615DF7B274E00BF00C9DB98 /* OnCue Presenter.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		4615DF82274E00C000C9DB98 /* OnCue Presenter WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4615DF9C274E00C000C9DB98 /* Build configuration list for PBXNativeTarget "OnCue Presenter WatchKit Extension" */;
+			buildPhases = (
+				4615DF7F274E00C000C9DB98 /* Sources */,
+				4615DF80274E00C000C9DB98 /* Frameworks */,
+				4615DF81274E00C000C9DB98 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "OnCue Presenter WatchKit Extension";
+			packageProductDependencies = (
+				4615DFAA274E03D200C9DB98 /* Defaults */,
+			);
+			productName = "OnCue Presenter WatchKit Extension";
+			productReference = 4615DF83274E00C000C9DB98 /* OnCue Presenter WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 		46F61168274733B400708686 /* OnCue */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 46F61177274733B500708686 /* Build configuration list for PBXNativeTarget "OnCue" */;
@@ -218,6 +320,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				4615DF9A274E00C000C9DB98 /* PBXTargetDependency */,
 			);
 			name = OnCue;
 			packageProductDependencies = (
@@ -226,23 +329,6 @@
 			productName = OnCue;
 			productReference = 46F61169274733B400708686 /* OnCue.app */;
 			productType = "com.apple.product-type.application";
-		};
-		46F61184274733FE00708686 /* WatchPresenter Extension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 46F61199274733FE00708686 /* Build configuration list for PBXNativeTarget "WatchPresenter Extension" */;
-			buildPhases = (
-				46F61181274733FE00708686 /* Sources */,
-				46F61182274733FE00708686 /* Frameworks */,
-				46F61183274733FE00708686 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "WatchPresenter Extension";
-			productName = "WatchPresenter WatchKit Extension";
-			productReference = 46F61185274733FE00708686 /* WatchPresenter Extension.appex */;
-			productType = "com.apple.product-type.watchkit2-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -254,10 +340,13 @@
 				LastSwiftUpdateCheck = 1310;
 				LastUpgradeCheck = 1310;
 				TargetAttributes = {
-					46F61168274733B400708686 = {
+					4615DF7A274E00BF00C9DB98 = {
 						CreatedOnToolsVersion = 13.1;
 					};
-					46F61184274733FE00708686 = {
+					4615DF82274E00C000C9DB98 = {
+						CreatedOnToolsVersion = 13.1;
+					};
+					46F61168274733B400708686 = {
 						CreatedOnToolsVersion = 13.1;
 					};
 				};
@@ -279,12 +368,29 @@
 			projectRoot = "";
 			targets = (
 				46F61168274733B400708686 /* OnCue */,
-				46F61184274733FE00708686 /* WatchPresenter Extension */,
+				4615DF7A274E00BF00C9DB98 /* OnCue Presenter */,
+				4615DF82274E00C000C9DB98 /* OnCue Presenter WatchKit Extension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		4615DF79274E00BF00C9DB98 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4615DF81274E00C000C9DB98 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4615DF96274E00C000C9DB98 /* Preview Assets.xcassets in Resources */,
+				4615DF93274E00C000C9DB98 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		46F61167274733B400708686 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -294,19 +400,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		46F61183274733FE00708686 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				46F61194274733FE00708686 /* Preview Assets.xcassets in Resources */,
-				46F611B22747784A00708686 /* Assets.xcassets in Resources */,
-				46F61191274733FE00708686 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		4615DF7F274E00C000C9DB98 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4615DFAD274E04F000C9DB98 /* WatchConnectivityModel.swift in Sources */,
+				4615DF8D274E00C000C9DB98 /* NotificationController.swift in Sources */,
+				4615DFA8274E030D00C9DB98 /* DefaultsConfig.swift in Sources */,
+				4615DFA4274E00E900C9DB98 /* PresentationView.swift in Sources */,
+				4615DFA7274E030B00C9DB98 /* Card.swift in Sources */,
+				4615DFA3274E00E600C9DB98 /* OnCueWatchApp.swift in Sources */,
+				4615DFA9274E030D00C9DB98 /* Project.swift in Sources */,
+				4615DF8F274E00C000C9DB98 /* NotificationView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		46F61165274733B400708686 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -314,33 +425,150 @@
 				4609EA80274CFF2E00F3BB48 /* AddProjectView.swift in Sources */,
 				46F6116F274733B400708686 /* ProjectListView.swift in Sources */,
 				46F611A42747369200708686 /* Card.swift in Sources */,
-				4609EA86274D0BA700F3BB48 /* PhoneConnectivity.swift in Sources */,
+				46C94EF927545D5D0038A930 /* PreferencesView.swift in Sources */,
+				4609EA86274D0BA700F3BB48 /* PhoneConnectivityModel.swift in Sources */,
 				4609EA82274D022800F3BB48 /* AddCardView.swift in Sources */,
 				46F611B52747789E00708686 /* ExtensionColor.swift in Sources */,
 				46F611B1274774D900708686 /* SingleProjectView.swift in Sources */,
 				46F6116D274733B400708686 /* OnCueApp.swift in Sources */,
 				46F611AA2747370500708686 /* Project.swift in Sources */,
 				4652FD87274BA6A4009BE526 /* CardListView.swift in Sources */,
+				46C94EFB2755E0C10038A930 /* PresentationViewPhone.swift in Sources */,
 				46F611AE274737A900708686 /* DefaultsConfig.swift in Sources */,
 				4652FD89274BB463009BE526 /* SingleCardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		46F61181274733FE00708686 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				46F6118D274733FE00708686 /* OnCueWatchApp.swift in Sources */,
-				46F611A8274736BD00708686 /* Card.swift in Sources */,
-				46F6118B274733FE00708686 /* PresentationView.swift in Sources */,
-				46F611AB2747370500708686 /* Project.swift in Sources */,
-				46F611AF274737A900708686 /* DefaultsConfig.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		4615DF86274E00C000C9DB98 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4615DF82274E00C000C9DB98 /* OnCue Presenter WatchKit Extension */;
+			targetProxy = 4615DF85274E00C000C9DB98 /* PBXContainerItemProxy */;
+		};
+		4615DF9A274E00C000C9DB98 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4615DF7A274E00BF00C9DB98 /* OnCue Presenter */;
+			targetProxy = 4615DF99274E00C000C9DB98 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		4615DF9D274E00C000C9DB98 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"OnCue Presenter WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = 68S22HWFQ4;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "OnCue Presenter WatchKit Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "OnCue Presenter WatchKit Extension";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = breadone.OnCue.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.0;
+			};
+			name = Debug;
+		};
+		4615DF9E274E00C000C9DB98 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"OnCue Presenter WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = 68S22HWFQ4;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "OnCue Presenter WatchKit Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "OnCue Presenter WatchKit Extension";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = breadone.OnCue.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.0;
+			};
+			name = Release;
+		};
+		4615DFA1274E00C000C9DB98 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 68S22HWFQ4;
+				GENERATE_INFOPLIST_FILE = YES;
+				IBSC_MODULE = OnCue_Presenter_WatchKit_Extension;
+				INFOPLIST_KEY_CFBundleDisplayName = "OnCue Presenter";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = breadone.OnCue;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = breadone.OnCue.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.0;
+			};
+			name = Debug;
+		};
+		4615DFA2274E00C000C9DB98 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 68S22HWFQ4;
+				GENERATE_INFOPLIST_FILE = YES;
+				IBSC_MODULE = OnCue_Presenter_WatchKit_Extension;
+				INFOPLIST_KEY_CFBundleDisplayName = "OnCue Presenter";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = breadone.OnCue;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = breadone.OnCue.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.0;
+			};
+			name = Release;
+		};
 		46F61175274733B500708686 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -482,7 +710,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -511,75 +739,31 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		46F6119A274733FE00708686 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"WatchPresenter WatchKit Extension/Preview Content\"";
-				DEVELOPMENT_TEAM = 68S22HWFQ4;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "WatchPresenter WatchKit Extension/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = OnCue;
-				INFOPLIST_KEY_CLKComplicationPrincipalClass = WatchPresenter_WatchKit_Extension.ComplicationController;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = breadone.OnCue.OnCueWatch;
-				PRODUCT_NAME = "${TARGET_NAME}";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 8.0;
-			};
-			name = Debug;
-		};
-		46F6119B274733FE00708686 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"WatchPresenter WatchKit Extension/Preview Content\"";
-				DEVELOPMENT_TEAM = 68S22HWFQ4;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "WatchPresenter WatchKit Extension/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = OnCue;
-				INFOPLIST_KEY_CLKComplicationPrincipalClass = WatchPresenter_WatchKit_Extension.ComplicationController;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = breadone.OnCue.OnCueWatch;
-				PRODUCT_NAME = "${TARGET_NAME}";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 8.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		4615DF9C274E00C000C9DB98 /* Build configuration list for PBXNativeTarget "OnCue Presenter WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4615DF9D274E00C000C9DB98 /* Debug */,
+				4615DF9E274E00C000C9DB98 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4615DFA0274E00C000C9DB98 /* Build configuration list for PBXNativeTarget "OnCue Presenter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4615DFA1274E00C000C9DB98 /* Debug */,
+				4615DFA2274E00C000C9DB98 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		46F61164274733B400708686 /* Build configuration list for PBXProject "OnCue" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -598,15 +782,6 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		46F61199274733FE00708686 /* Build configuration list for PBXNativeTarget "WatchPresenter Extension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				46F6119A274733FE00708686 /* Debug */,
-				46F6119B274733FE00708686 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
@@ -621,6 +796,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		4615DFAA274E03D200C9DB98 /* Defaults */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 46F611A5274736AA00708686 /* XCRemoteSwiftPackageReference "Defaults" */;
+			productName = Defaults;
+		};
 		46F611A6274736AA00708686 /* Defaults */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 46F611A5274736AA00708686 /* XCRemoteSwiftPackageReference "Defaults" */;
