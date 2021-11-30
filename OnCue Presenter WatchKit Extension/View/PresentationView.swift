@@ -12,13 +12,18 @@ struct PresentationView: View {
     
     var body: some View {
         NavigationView {
-            TabView {
-                ForEach(model.project.cards, id: \.id) { card in
-                    Text(card.text)
-                        .padding()
+            GeometryReader { geometry in
+                TabView {
+                    ForEach(model.project.cards, id: \.id) { card in
+                        Text(card.text)
+                            .padding(.top, 3) // apple watch 3 reasons
+                            .frame(width: geometry.size.width,
+                                   height: geometry.size.height,
+                                   alignment: .topLeading)
+                    }
                 }
+                .navigationTitle(model.project.name)
             }
-            .navigationTitle(model.project.name)
         }
     }
 }

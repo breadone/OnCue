@@ -9,8 +9,6 @@ import Foundation
 import WatchConnectivity
 
 class PhoneConnectivityModel: NSObject, WCSessionDelegate {
-    static let shared = PhoneConnectivityModel()
-    
     var session: WCSession
     
     init(session: WCSession = .default) {

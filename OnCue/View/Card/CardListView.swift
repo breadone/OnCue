@@ -16,6 +16,8 @@ struct CardListView: View {
     @State private var presenting: Bool = false
     @Default(.watchMode) private var watchMode
     
+    let model = PhoneConnectivityModel()
+    
     var project: Project
     
     let columns = [GridItem(.flexible(minimum: 100)), GridItem(.flexible(minimum: 100))]
@@ -61,8 +63,20 @@ struct CardListView: View {
 
 extension CardListView {
     func pushToWatch() {
-        if !PhoneConnectivityModel.shared.session.isReachable {
+        if !model.session.isReachable {
             self.alertText = "Could not reach Watch. Make sure it is unlocked, and the OnCue app is open"
+            self.alertShowing.toggle()
+            return
+        }
+        
+        if !model.session.isPaired {
+            self.alertText = "No paired Watch was found, make sure it's on and connected to your iPhone"
+            self.alertShowing.toggle()
+            return
+        }
+        
+        if model.session.activationState != .activated {
+            self.alertText = "WC Session was not activated"
             self.alertShowing.toggle()
             return
         }
@@ -70,7 +84,7 @@ extension CardListView {
         let encoder = PropertyListEncoder()
         let data = try? encoder.encode(self.project)
 
-        PhoneConnectivityModel.shared.session.sendMessage(["project": data as Any], replyHandler: nil) { error in
+        model.session.sendMessage(["project": data as Any], replyHandler: nil) { error in
             self.alertText = error.localizedDescription
             self.alertShowing.toggle()
             return

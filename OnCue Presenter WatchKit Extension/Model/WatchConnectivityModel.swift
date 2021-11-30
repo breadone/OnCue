@@ -29,8 +29,9 @@ class WatchConnectivityModel: NSObject, WCSessionDelegate, ObservableObject {
     func session(_ session: WCSession, didReceiveMessage message: [String: Any]) {
         DispatchQueue.main.async { [self] in
             self.projectData = (message["project"] as? Data ?? Data())
+            
             do {
-                self.project =  try decoder.decode(Project.self, from: projectData)
+                self.project = try decoder.decode(Project.self, from: projectData)
             } catch {
                 self.project = Project.errorProject
             }
