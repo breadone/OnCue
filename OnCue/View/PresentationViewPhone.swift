@@ -16,7 +16,7 @@ struct PresentationViewPhone: View {
     let darkModeColour = Color(white: 0.2, opacity: 0.7)
     
     var body: some View {
-        GeometryReader { geo in
+        GeometryReader { geometry in
             ZStack {
                 TabView {
                     ForEach(project.cards, id: \.id) { card in
@@ -29,8 +29,8 @@ struct PresentationViewPhone: View {
                                 .font(.system(size: 25, weight: .medium, design: .default))
                         }
                         .padding()
-                        .frame(width: geo.size.width * 0.96,
-                               height: geo.size.height,// * 0.98,
+                        .frame(width: geometry.size.width * 0.96,
+                               height: geometry.size.height,// * 0.98,
                                alignment: .topLeading)
                         .background(cs == .dark ? darkModeColour : lightModeColour)
                         .cornerRadius(17)

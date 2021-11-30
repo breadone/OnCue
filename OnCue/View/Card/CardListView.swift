@@ -14,9 +14,9 @@ struct CardListView: View {
     @State private var alertText: String = ""
     @State private var alertShowing: Bool = false
     @State private var presenting: Bool = false
+    @Default(.watchMode) private var watchMode
     
     var project: Project
-    let watchMode = Defaults[.watchMode]
     
     let columns = [GridItem(.flexible(minimum: 100)), GridItem(.flexible(minimum: 100))]
     
@@ -60,19 +60,23 @@ struct CardListView: View {
 }
 
 extension CardListView {
-    func replyHandler(_ d: [String : Any]) {
-        self.alertText = d["replyMessage"] as? String ?? "Pushed to Watch"
-        self.alertShowing.toggle()
-    }
-    
     func pushToWatch() {
+        if !PhoneConnectivityModel.shared.session.isReachable {
+            self.alertText = "Could not reach Watch. Make sure it is unlocked, and the OnCue app is open"
+            self.alertShowing.toggle()
+            return
+        }
+        
         let encoder = PropertyListEncoder()
         let data = try? encoder.encode(self.project)
-        // TODO: implement error handling
-        PhoneConnectivityModel.shared.session.sendMessage(["project": data as Any], replyHandler: replyHandler) { error in
+
+        PhoneConnectivityModel.shared.session.sendMessage(["project": data as Any], replyHandler: nil) { error in
             self.alertText = error.localizedDescription
             self.alertShowing.toggle()
+            return
         }
+        self.alertText = "Pushed to Watch"
+        self.alertShowing.toggle()
     }
 }
 

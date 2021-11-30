@@ -9,6 +9,8 @@ import SwiftUI
 import Defaults
 
 struct PreferencesView: View {
+    @Environment(\.dismiss) var dismiss
+    
     var body: some View {
         Form {
             Section(header: Text("General")) {
@@ -17,6 +19,13 @@ struct PreferencesView: View {
             
         }
         .navigationTitle("Preferences")
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button("Done") {
+                    dismiss.callAsFunction()
+                }
+            }
+        }
     }
 }
 

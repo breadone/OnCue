@@ -11,7 +11,7 @@ import WatchConnectivity
 class WatchConnectivityModel: NSObject, WCSessionDelegate, ObservableObject {
     var session: WCSession
     
-    @Published var project = Project(name: "New Project")
+    @Published var project = Project.defaultWatchProject
     var projectData = Data()
     let decoder = PropertyListDecoder()
     
@@ -29,7 +29,11 @@ class WatchConnectivityModel: NSObject, WCSessionDelegate, ObservableObject {
     func session(_ session: WCSession, didReceiveMessage message: [String: Any]) {
         DispatchQueue.main.async { [self] in
             self.projectData = (message["project"] as? Data ?? Data())
-            self.project =  try! decoder.decode(Project.self, from: projectData)
+            do {
+                self.project =  try decoder.decode(Project.self, from: projectData)
+            } catch {
+                self.project = Project.errorProject
+            }
         }
     }
 }

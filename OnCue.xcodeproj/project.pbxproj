@@ -177,6 +177,26 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		46C82664275601460027B69F /* Project */ = {
+			isa = PBXGroup;
+			children = (
+				46F6116E274733B400708686 /* ProjectListView.swift */,
+				4609EA7F274CFF2E00F3BB48 /* AddProjectView.swift */,
+				46F611B0274774D900708686 /* SingleProjectView.swift */,
+			);
+			path = Project;
+			sourceTree = "<group>";
+		};
+		46C82665275601500027B69F /* Card */ = {
+			isa = PBXGroup;
+			children = (
+				4652FD86274BA6A4009BE526 /* CardListView.swift */,
+				4609EA81274D022800F3BB48 /* AddCardView.swift */,
+				4652FD88274BB463009BE526 /* SingleCardView.swift */,
+			);
+			path = Card;
+			sourceTree = "<group>";
+		};
 		46F61160274733B400708686 = {
 			isa = PBXGroup;
 			children = (
@@ -223,12 +243,8 @@
 			isa = PBXGroup;
 			children = (
 				46C94EF827545D5D0038A930 /* PreferencesView.swift */,
-				46F6116E274733B400708686 /* ProjectListView.swift */,
-				4609EA7F274CFF2E00F3BB48 /* AddProjectView.swift */,
-				46F611B0274774D900708686 /* SingleProjectView.swift */,
-				4652FD86274BA6A4009BE526 /* CardListView.swift */,
-				4609EA81274D022800F3BB48 /* AddCardView.swift */,
-				4652FD88274BB463009BE526 /* SingleCardView.swift */,
+				46C82664275601460027B69F /* Project */,
+				46C82665275601500027B69F /* Card */,
 				46C94EFA2755E0C10038A930 /* PresentationViewPhone.swift */,
 			);
 			path = View;

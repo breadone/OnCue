@@ -10,6 +10,7 @@ import Defaults
 
 struct ProjectListView: View {
     @State private var showingAddScreen = false
+    @State private var showingPrefsScreen = false
     
     @Default(.projects) private var projectList
     
@@ -40,6 +41,12 @@ struct ProjectListView: View {
             }
             .navigationTitle("Projects")
             .toolbar {
+                ToolbarItemGroup(placement: .navigationBarLeading) {
+                    Button(action: {self.showingPrefsScreen.toggle()}) {
+                        Image(systemName: "gearshape.fill")
+                    }
+                }
+                
                 ToolbarItemGroup(placement: .navigationBarTrailing) {
                     Button(action: {self.showingAddScreen.toggle()}) {
                         Image(systemName: "plus")
@@ -48,6 +55,9 @@ struct ProjectListView: View {
             }
             .sheet(isPresented: $showingAddScreen) {
                 NavigationView { AddProjectView() }
+            }
+            .sheet(isPresented: $showingPrefsScreen) {
+                NavigationView { PreferencesView() }
             }
         }
     }

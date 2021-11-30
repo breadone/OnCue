@@ -24,4 +24,8 @@ struct Project: Codable, Identifiable, DefaultsSerializable {
 
 extension Project {
     static let testProject = Project(name: "Test Project", cards: [Card(0, text: "card one"), Card(1, text: "card two")])
+    
+    static let defaultWatchProject = Project(name: "No Project", cards: [Card(0, text: "Push some cards to your Watch from the iPhone app")])
+    
+    static let errorProject = Project(name: "Error", cards: [Card(0, text: "An error occured.")])
 }
