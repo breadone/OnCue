@@ -26,6 +26,17 @@
 		4652FD87274BA6A4009BE526 /* CardListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4652FD86274BA6A4009BE526 /* CardListView.swift */; };
 		4652FD89274BB463009BE526 /* SingleCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4652FD88274BB463009BE526 /* SingleCardView.swift */; };
 		46C241D92758816000944627 /* OnCue.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 46C241D72758816000944627 /* OnCue.xcdatamodeld */; };
+		46C241DB275885AF00944627 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C241DA275885AF00944627 /* DataController.swift */; };
+		46C241E02758887B00944627 /* Card+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C241DC2758887B00944627 /* Card+CoreDataClass.swift */; };
+		46C241E12758887B00944627 /* Card+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C241DC2758887B00944627 /* Card+CoreDataClass.swift */; };
+		46C241E22758887B00944627 /* Card+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C241DD2758887B00944627 /* Card+CoreDataProperties.swift */; };
+		46C241E32758887B00944627 /* Card+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C241DD2758887B00944627 /* Card+CoreDataProperties.swift */; };
+		46C241E42758887B00944627 /* Project+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C241DE2758887B00944627 /* Project+CoreDataClass.swift */; };
+		46C241E52758887B00944627 /* Project+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C241DE2758887B00944627 /* Project+CoreDataClass.swift */; };
+		46C241E62758887B00944627 /* Project+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C241DF2758887B00944627 /* Project+CoreDataProperties.swift */; };
+		46C241E72758887B00944627 /* Project+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C241DF2758887B00944627 /* Project+CoreDataProperties.swift */; };
+		46C241EB275895D400944627 /* CodingUserInfoKeyEXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C241EA275895D400944627 /* CodingUserInfoKeyEXT.swift */; };
+		46C241EC275895D400944627 /* CodingUserInfoKeyEXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C241EA275895D400944627 /* CodingUserInfoKeyEXT.swift */; };
 		46C94EF927545D5D0038A930 /* PreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C94EF827545D5D0038A930 /* PreferencesView.swift */; };
 		46C94EFB2755E0C10038A930 /* PresentationViewPhone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C94EFA2755E0C10038A930 /* PresentationViewPhone.swift */; };
 		46F6116D274733B400708686 /* OnCueApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F6116C274733B400708686 /* OnCueApp.swift */; };
@@ -97,6 +108,12 @@
 		4652FD86274BA6A4009BE526 /* CardListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListView.swift; sourceTree = "<group>"; };
 		4652FD88274BB463009BE526 /* SingleCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleCardView.swift; sourceTree = "<group>"; };
 		46C241D82758816000944627 /* OnCue.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = OnCue.xcdatamodel; sourceTree = "<group>"; };
+		46C241DA275885AF00944627 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		46C241DC2758887B00944627 /* Card+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Card+CoreDataClass.swift"; sourceTree = "<group>"; };
+		46C241DD2758887B00944627 /* Card+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Card+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		46C241DE2758887B00944627 /* Project+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Project+CoreDataClass.swift"; sourceTree = "<group>"; };
+		46C241DF2758887B00944627 /* Project+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Project+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		46C241EA275895D400944627 /* CodingUserInfoKeyEXT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodingUserInfoKeyEXT.swift; sourceTree = "<group>"; };
 		46C94EF827545D5D0038A930 /* PreferencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesView.swift; sourceTree = "<group>"; };
 		46C94EFA2755E0C10038A930 /* PresentationViewPhone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationViewPhone.swift; sourceTree = "<group>"; };
 		46F61169274733B400708686 /* OnCue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnCue.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -138,6 +155,7 @@
 			children = (
 				4609EA85274D0BA700F3BB48 /* PhoneConnectivityModel.swift */,
 				46C241D72758816000944627 /* OnCue.xcdatamodeld */,
+				46C241DA275885AF00944627 /* DataController.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -178,6 +196,24 @@
 				4615DFAC274E04F000C9DB98 /* WatchConnectivityModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		46C241E82758889600944627 /* Project */ = {
+			isa = PBXGroup;
+			children = (
+				46C241DE2758887B00944627 /* Project+CoreDataClass.swift */,
+				46C241DF2758887B00944627 /* Project+CoreDataProperties.swift */,
+			);
+			path = Project;
+			sourceTree = "<group>";
+		};
+		46C241E92758889D00944627 /* Card */ = {
+			isa = PBXGroup;
+			children = (
+				46C241DC2758887B00944627 /* Card+CoreDataClass.swift */,
+				46C241DD2758887B00944627 /* Card+CoreDataProperties.swift */,
+			);
+			path = Card;
 			sourceTree = "<group>";
 		};
 		46C82664275601460027B69F /* Project */ = {
@@ -264,9 +300,12 @@
 		46F611A22747367E00708686 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				46C241E92758889D00944627 /* Card */,
+				46C241E82758889600944627 /* Project */,
 				46F611A32747369200708686 /* Card.swift */,
 				46F611A92747370500708686 /* Project.swift */,
 				46F611AD274737A900708686 /* DefaultsConfig.swift */,
+				46C241EA275895D400944627 /* CodingUserInfoKeyEXT.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -426,6 +465,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46C241E12758887B00944627 /* Card+CoreDataClass.swift in Sources */,
+				46C241E32758887B00944627 /* Card+CoreDataProperties.swift in Sources */,
 				4615DFAD274E04F000C9DB98 /* WatchConnectivityModel.swift in Sources */,
 				4615DF8D274E00C000C9DB98 /* NotificationController.swift in Sources */,
 				4615DFA8274E030D00C9DB98 /* DefaultsConfig.swift in Sources */,
@@ -433,6 +474,9 @@
 				4615DFA7274E030B00C9DB98 /* Card.swift in Sources */,
 				4615DFA3274E00E600C9DB98 /* OnCueWatchApp.swift in Sources */,
 				4615DFA9274E030D00C9DB98 /* Project.swift in Sources */,
+				46C241E52758887B00944627 /* Project+CoreDataClass.swift in Sources */,
+				46C241EC275895D400944627 /* CodingUserInfoKeyEXT.swift in Sources */,
+				46C241E72758887B00944627 /* Project+CoreDataProperties.swift in Sources */,
 				4615DF8F274E00C000C9DB98 /* NotificationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -443,17 +487,23 @@
 			files = (
 				4609EA80274CFF2E00F3BB48 /* AddProjectView.swift in Sources */,
 				46F6116F274733B400708686 /* ProjectListView.swift in Sources */,
+				46C241E62758887B00944627 /* Project+CoreDataProperties.swift in Sources */,
 				46F611A42747369200708686 /* Card.swift in Sources */,
+				46C241EB275895D400944627 /* CodingUserInfoKeyEXT.swift in Sources */,
 				46C94EF927545D5D0038A930 /* PreferencesView.swift in Sources */,
 				4609EA86274D0BA700F3BB48 /* PhoneConnectivityModel.swift in Sources */,
 				4609EA82274D022800F3BB48 /* AddCardView.swift in Sources */,
 				46C241D92758816000944627 /* OnCue.xcdatamodeld in Sources */,
 				46F611B52747789E00708686 /* ExtensionColor.swift in Sources */,
+				46C241E42758887B00944627 /* Project+CoreDataClass.swift in Sources */,
 				46F611B1274774D900708686 /* SingleProjectView.swift in Sources */,
 				46F6116D274733B400708686 /* OnCueApp.swift in Sources */,
 				46F611AA2747370500708686 /* Project.swift in Sources */,
+				46C241E02758887B00944627 /* Card+CoreDataClass.swift in Sources */,
 				4652FD87274BA6A4009BE526 /* CardListView.swift in Sources */,
 				46C94EFB2755E0C10038A930 /* PresentationViewPhone.swift in Sources */,
+				46C241DB275885AF00944627 /* DataController.swift in Sources */,
+				46C241E22758887B00944627 /* Card+CoreDataProperties.swift in Sources */,
 				46F611AE274737A900708686 /* DefaultsConfig.swift in Sources */,
 				4652FD89274BB463009BE526 /* SingleCardView.swift in Sources */,
 			);

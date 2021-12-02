@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct OnCueApp: App {
+    @StateObject private var dataController = DataController()
+    
     var body: some Scene {
         WindowGroup {
             ProjectListView()
+                .environment(\.managedObjectContext, dataController.container.viewContext)
         }
     }
 }
