@@ -8,23 +8,23 @@
 import SwiftUI
 
 struct ProjectCardView: View {
-    var project: oldProject = oldProject.testProject
+    var project: Project
     var bgColour: Color = .accentColor
     
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
-                Text(self.project.name)
+                Text(self.project.wrappedName)
                     .font(.system(size: 20, weight: .heavy, design: .default))
                     .foregroundColor(.white)
                 Spacer()
-                Text("\(self.project.cards.count) \(self.project.cards.count != 1 ? "Cards" : "Card")")
+                Text("\(self.project.wrappedCards.count) \(self.project.wrappedCards.count != 1 ? "Cards" : "Card")")
                     .font(.system(size: 15, weight: .medium, design: .default))
                     .foregroundColor(.white)
             }
             HStack {
-                if self.project.cards.capacity <= 5 {
-                    ForEach(self.project.cards, id: \.id) { card in
+                if self.project.wrappedCards.capacity <= 5 {
+                    ForEach(self.project.wrappedCards, id: \.id) { card in
                         Text(card.text)
                             .font(.system(size: 14))
                             .foregroundColor(.white)
@@ -35,7 +35,7 @@ struct ProjectCardView: View {
                     }
                 } else {
                     ForEach(0..<4) { i in
-                        Text(self.project.cards[i].text)
+                        Text(self.project.wrappedCards[i].text)
                             .font(.system(size: 14))
                             .foregroundColor(.white)
                             .padding(5)

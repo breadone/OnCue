@@ -9,27 +9,23 @@ import SwiftUI
 import Defaults
 
 struct ProjectListView: View {
+    @Environment(\.managedObjectContext) var context
     @State private var showingAddScreen = false
     @State private var showingPrefsScreen = false
     
     @Default(.projects) private var projectList
-    
-    private var sortedList: [oldProject] { // sorts projects by date created
-        self.projectList.sorted {
-            $0.dateCreated > $1.dateCreated
-        }
-    }
+    @FetchRequest(sortDescriptors: [SortDescriptor(\.dateCreated, order: .reverse)]) var projects: FetchedResults<Project>
     
     var body: some View {
         NavigationView {
             GeometryReader { geo in
                 ScrollView {
-                    ForEach(sortedList, id: \.id) { proj in
+                    ForEach(projects, id: \.id) { proj in
                         NavigationLink(destination: CardListView(project: proj)) {
                             ProjectCardView(project: proj)
                         }
                         .contextMenu {
-                            Button(action: {self.removeProject(proj.id)}) {
+                            Button(action: {self.removeProject(proj)}) {
                                 Text("Delete")
                                 Image(systemName: "trash")
                             }
@@ -64,16 +60,8 @@ struct ProjectListView: View {
 }
 
 extension ProjectListView {
-    func formatDate(_ d: Date, format: String = "dd/MM/yy") -> String {
-        let formatter = DateFormatter()
-        formatter.dateFormat = format
-        return formatter.string(from: d)
-    }
-    
-    func removeProject(_ id: UUID) {
-        self.projectList.removeAll {
-            $0.id == id
-        }
+    func removeProject(_ project: Project) {
+        context.delete(project)
     }
 }
 

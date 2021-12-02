@@ -18,7 +18,7 @@ struct CardListView: View {
     
     let model = PhoneConnectivityModel()
     
-    var project: oldProject
+    var project: Project
     
     let columns = [GridItem(.flexible(minimum: 100)), GridItem(.flexible(minimum: 100))]
     
@@ -26,7 +26,7 @@ struct CardListView: View {
         GeometryReader { geo in
             ScrollView {
                 LazyVGrid(columns: columns, spacing: 20) {
-                    ForEach(self.project.cards, id: \.id) { card in
+                    ForEach(self.project.wrappedCards, id: \.id) { card in
                         SingleCardView(card: card)
                             .padding(.vertical, geo.size.height / 170)
                             .padding(.horizontal, geo.size.width / 45)
@@ -40,7 +40,7 @@ struct CardListView: View {
                 }
             }
         }
-        .navigationTitle(project.name)
+        .navigationTitle(project.wrappedName)
         .toolbar {
             ToolbarItemGroup(placement: .navigationBarTrailing) {
                 Button(action: {self.showingAddScreen.toggle()}) {
@@ -52,7 +52,7 @@ struct CardListView: View {
             }
         }
         .sheet(isPresented: $showingAddScreen) {
-            NavigationView { AddCardView(projectID: self.project.id) }
+            NavigationView { AddCardView(projectID: self.project.id!) }
         }
         .alert(self.alertText, isPresented: $alertShowing) {
             Button("OK", role: .cancel) { self.alertText = "" }
@@ -94,11 +94,11 @@ extension CardListView {
     }
 }
 
-struct CardListView_Previews: PreviewProvider {
-    static var previews: some View {
-        NavigationView {
-            CardListView(project: oldProject.testProject)
-                .preferredColorScheme(.dark)
-        }
-    }
-}
+//struct CardListView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        NavigationView {
+//            CardListView(project: oldProject.testProject)
+//                .preferredColorScheme(.dark)
+//        }
+//    }
+//}

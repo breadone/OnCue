@@ -28,8 +28,7 @@ public class Project: NSManagedObject, Codable {
         self.id = try container.decode(UUID.self, forKey: .id)
         self.name = try container.decode(String.self, forKey: .name)
         self.dateCreated = try container.decode(Date.self, forKey: .dateCreated)
-        let cardArray = try container.decode([Card].self, forKey: .cards)
-        self.cards = NSSet(array: cardArray)
+        self.cards = try container.decode([Card].self, forKey: .cards)
     }
     
     // MARK: Encodable Conformance
@@ -39,7 +38,7 @@ public class Project: NSManagedObject, Codable {
         try container.encode(id, forKey: .id)
         try container.encode(name, forKey: .name)
         try container.encode(dateCreated, forKey: .dateCreated)
-        try container.encode(cards as! Set<Card>, forKey: .cards)
+        try container.encode(cards, forKey: .cards)
     }
     
 }

@@ -11,7 +11,7 @@ struct PresentationViewPhone: View {
     @Environment(\.colorScheme) var cs
     @Environment(\.dismiss) var dismiss
     
-    let project: oldProject
+    let project: Project
     let lightModeColour = Color(white: 0.94, opacity: 1)
     let darkModeColour = Color(white: 0.2, opacity: 0.7)
     
@@ -19,7 +19,7 @@ struct PresentationViewPhone: View {
         GeometryReader { geometry in
             ZStack {
                 TabView {
-                    ForEach(project.cards, id: \.id) { card in
+                    ForEach(project.wrappedCards, id: \.id) { card in
                         VStack(alignment: .leading) {
                             Text("\(card.position + 1)")
                                 .foregroundColor(cs == .dark ? .white : .black)
@@ -39,7 +39,7 @@ struct PresentationViewPhone: View {
                 .tabViewStyle(.page)
             }
         }
-        .navigationTitle(self.project.name).navigationBarTitleDisplayMode(.inline)
+        .navigationTitle(self.project.wrappedName).navigationBarTitleDisplayMode(.inline)
         .navigationBarBackButtonHidden(true)
         .toolbar {
             ToolbarItem(placement: .navigationBarLeading) {
@@ -52,11 +52,11 @@ struct PresentationViewPhone: View {
     }
 }
 
-struct PresentationViewPhone_Previews: PreviewProvider {
-    static var previews: some View {
-        NavigationView {
-            PresentationViewPhone(project: oldProject.testProject)
-                            .preferredColorScheme(.dark)
-        }
-    }
-}
+//struct PresentationViewPhone_Previews: PreviewProvider {
+//    static var previews: some View {
+//        NavigationView {
+//            PresentationViewPhone(project: oldProject.testProject)
+//                            .preferredColorScheme(.dark)
+//        }
+//    }
+//}

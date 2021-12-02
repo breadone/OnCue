@@ -19,31 +19,25 @@ extension Project {
     @NSManaged public var id: UUID?
     @NSManaged public var name: String?
     @NSManaged public var dateCreated: Date
-    @NSManaged public var cards: NSSet?
+    @NSManaged public var cards: [Card]?
     
     public var wrappedName: String {
         self.name ?? "No Name"
     }
     
-}
-
-// MARK: Generated accessors for cards
-extension Project {
-    
-    @objc(addCardsObject:)
-    @NSManaged public func addToCards(_ value: Card)
-    
-    @objc(removeCardsObject:)
-    @NSManaged public func removeFromCards(_ value: Card)
-    
-    @objc(addCards:)
-    @NSManaged public func addToCards(_ values: NSSet)
-    
-    @objc(removeCards:)
-    @NSManaged public func removeFromCards(_ values: NSSet)
+    public var wrappedCards: [Card] {
+        self.cards ?? []
+    }
     
 }
 
 extension Project: Identifiable {
-
+    public static func add(context: NSManagedObjectContext, name: String) {
+        let newProject = Project(context: context)
+        newProject.id = UUID()
+        newProject.name = name
+        newProject.dateCreated = Date()
+        newProject.cards = []
+        try? context.save()
+    }
 }

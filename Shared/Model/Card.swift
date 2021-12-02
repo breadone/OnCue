@@ -8,8 +8,9 @@
 import Foundation
 import Defaults
 
-struct oldCard: Codable, Identifiable, DefaultsSerializable {
-    let id: UUID
+@objc(Card)
+public class Card: NSObject, Codable, Identifiable, DefaultsSerializable {
+    public let id: UUID
     var position: Int
     var text: String
     var dateCreated: Date
