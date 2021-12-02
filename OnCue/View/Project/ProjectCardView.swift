@@ -18,7 +18,7 @@ struct ProjectCardView: View {
                     .font(.system(size: 20, weight: .heavy, design: .default))
                     .foregroundColor(.white)
                 Spacer()
-                Text("\(self.project.wrappedCards.count) \(self.project.wrappedCards.count != 1 ? "Cards" : "Card")")
+                Text("\(self.project.cards.count) \(self.project.cards.count != 1 ? "Cards" : "Card")")
                     .font(.system(size: 15, weight: .medium, design: .default))
                     .foregroundColor(.white)
             }

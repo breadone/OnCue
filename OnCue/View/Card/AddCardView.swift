@@ -9,22 +9,15 @@ import SwiftUI
 import Defaults
 
 struct AddCardView: View {
+    @Environment(\.managedObjectContext) var context
     @Environment(\.dismiss) var dismiss
     @Default(.projects) var projectList
     @State private var text: String = ""
     
-    var projectID: UUID
-    /*
-     the reason i have to do this is because im using structs for the project/cards,
-     the struct gets copied over from CardList to AddCard, so the changes are *made* but arent actually saved,
-     therefore i have to actually load the list again, and manually edit that list in order for basic saving to work
-     */
-    var project: Int { // finds the index in the project list that corresponds to the current project
-        projectList.firstIndex { $0.id == projectID }!
-    }
+    var project: Project
     
-    var lastCard: Int {
-        self.projectList[project].cards.endIndex
+    var lastCard: Int16 {
+        Int16(self.project.wrappedCards.endIndex)
     }
     
     var body: some View {
@@ -39,7 +32,8 @@ struct AddCardView: View {
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button("Save") {
-                        self.projectList[project].cards.append(Card(lastCard, text: text))
+                        self.project.cards.append(Card(lastCard, text: text))
+                        try? context.save()
                         dismiss.callAsFunction()
                     }
                 }
@@ -48,10 +42,10 @@ struct AddCardView: View {
     }
 }
 
-struct AddCardView_Previews: PreviewProvider {
-    static var previews: some View {
-        NavigationView {
-            AddCardView(projectID: oldProject.testProject.id)
-        }
-    }
-}
+//struct AddCardView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        NavigationView {
+//            AddCardView(projectID: oldProject.testProject.id)
+//        }
+//    }
+//}

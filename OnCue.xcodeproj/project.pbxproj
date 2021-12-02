@@ -20,7 +20,6 @@
 		4615DFA4274E00E900C9DB98 /* PresentationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F6118A274733FE00708686 /* PresentationView.swift */; };
 		4615DFA7274E030B00C9DB98 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F611A32747369200708686 /* Card.swift */; };
 		4615DFA8274E030D00C9DB98 /* DefaultsConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F611AD274737A900708686 /* DefaultsConfig.swift */; };
-		4615DFA9274E030D00C9DB98 /* oldProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F611A92747370500708686 /* oldProject.swift */; };
 		4615DFAB274E03D200C9DB98 /* Defaults in Frameworks */ = {isa = PBXBuildFile; productRef = 4615DFAA274E03D200C9DB98 /* Defaults */; };
 		4615DFAD274E04F000C9DB98 /* WatchConnectivityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4615DFAC274E04F000C9DB98 /* WatchConnectivityModel.swift */; };
 		4652FD87274BA6A4009BE526 /* CardListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4652FD86274BA6A4009BE526 /* CardListView.swift */; };
@@ -35,13 +34,14 @@
 		46C241EC275895D400944627 /* CodingUserInfoKeyEXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C241EA275895D400944627 /* CodingUserInfoKeyEXT.swift */; };
 		46C94EF927545D5D0038A930 /* PreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C94EF827545D5D0038A930 /* PreferencesView.swift */; };
 		46C94EFB2755E0C10038A930 /* PresentationViewPhone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C94EFA2755E0C10038A930 /* PresentationViewPhone.swift */; };
+		46DB57F02758D0A4001B911E /* oldProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46DB57EF2758D0A4001B911E /* oldProject.swift */; };
+		46DB57F12758D0A4001B911E /* oldProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46DB57EF2758D0A4001B911E /* oldProject.swift */; };
 		46F6116D274733B400708686 /* OnCueApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F6116C274733B400708686 /* OnCueApp.swift */; };
 		46F6116F274733B400708686 /* ProjectListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F6116E274733B400708686 /* ProjectListView.swift */; };
 		46F61171274733B500708686 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46F61170274733B500708686 /* Assets.xcassets */; };
 		46F61174274733B500708686 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46F61173274733B500708686 /* Preview Assets.xcassets */; };
 		46F611A42747369200708686 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F611A32747369200708686 /* Card.swift */; };
 		46F611A7274736AA00708686 /* Defaults in Frameworks */ = {isa = PBXBuildFile; productRef = 46F611A6274736AA00708686 /* Defaults */; };
-		46F611AA2747370500708686 /* oldProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F611A92747370500708686 /* oldProject.swift */; };
 		46F611AE274737A900708686 /* DefaultsConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F611AD274737A900708686 /* DefaultsConfig.swift */; };
 		46F611B1274774D900708686 /* ProjectCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F611B0274774D900708686 /* ProjectCardView.swift */; };
 		46F611B52747789E00708686 /* ExtensionColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F611B42747789E00708686 /* ExtensionColor.swift */; };
@@ -110,6 +110,7 @@
 		46C241EA275895D400944627 /* CodingUserInfoKeyEXT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodingUserInfoKeyEXT.swift; sourceTree = "<group>"; };
 		46C94EF827545D5D0038A930 /* PreferencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesView.swift; sourceTree = "<group>"; };
 		46C94EFA2755E0C10038A930 /* PresentationViewPhone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationViewPhone.swift; sourceTree = "<group>"; };
+		46DB57EF2758D0A4001B911E /* oldProject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = oldProject.swift; sourceTree = "<group>"; };
 		46F61169274733B400708686 /* OnCue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnCue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46F6116C274733B400708686 /* OnCueApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnCueApp.swift; sourceTree = "<group>"; };
 		46F6116E274733B400708686 /* ProjectListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectListView.swift; sourceTree = "<group>"; };
@@ -118,7 +119,6 @@
 		46F6118A274733FE00708686 /* PresentationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationView.swift; sourceTree = "<group>"; };
 		46F6118C274733FE00708686 /* OnCueWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnCueWatchApp.swift; sourceTree = "<group>"; };
 		46F611A32747369200708686 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
-		46F611A92747370500708686 /* oldProject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = oldProject.swift; sourceTree = "<group>"; };
 		46F611AD274737A900708686 /* DefaultsConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultsConfig.swift; sourceTree = "<group>"; };
 		46F611B0274774D900708686 /* ProjectCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectCardView.swift; sourceTree = "<group>"; };
 		46F611B42747789E00708686 /* ExtensionColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionColor.swift; sourceTree = "<group>"; };
@@ -287,7 +287,7 @@
 			children = (
 				46C241E82758889600944627 /* Project */,
 				46F611A32747369200708686 /* Card.swift */,
-				46F611A92747370500708686 /* oldProject.swift */,
+				46DB57EF2758D0A4001B911E /* oldProject.swift */,
 				46F611AD274737A900708686 /* DefaultsConfig.swift */,
 				46C241EA275895D400944627 /* CodingUserInfoKeyEXT.swift */,
 			);
@@ -452,10 +452,10 @@
 				4615DFAD274E04F000C9DB98 /* WatchConnectivityModel.swift in Sources */,
 				4615DF8D274E00C000C9DB98 /* NotificationController.swift in Sources */,
 				4615DFA8274E030D00C9DB98 /* DefaultsConfig.swift in Sources */,
+				46DB57F12758D0A4001B911E /* oldProject.swift in Sources */,
 				4615DFA4274E00E900C9DB98 /* PresentationView.swift in Sources */,
 				4615DFA7274E030B00C9DB98 /* Card.swift in Sources */,
 				4615DFA3274E00E600C9DB98 /* OnCueWatchApp.swift in Sources */,
-				4615DFA9274E030D00C9DB98 /* oldProject.swift in Sources */,
 				46C241E52758887B00944627 /* Project+CoreDataClass.swift in Sources */,
 				46C241EC275895D400944627 /* CodingUserInfoKeyEXT.swift in Sources */,
 				46C241E72758887B00944627 /* Project+CoreDataProperties.swift in Sources */,
@@ -469,6 +469,7 @@
 			files = (
 				4609EA80274CFF2E00F3BB48 /* AddProjectView.swift in Sources */,
 				46F6116F274733B400708686 /* ProjectListView.swift in Sources */,
+				46DB57F02758D0A4001B911E /* oldProject.swift in Sources */,
 				46C241E62758887B00944627 /* Project+CoreDataProperties.swift in Sources */,
 				46F611A42747369200708686 /* Card.swift in Sources */,
 				46C241EB275895D400944627 /* CodingUserInfoKeyEXT.swift in Sources */,
@@ -480,7 +481,6 @@
 				46C241E42758887B00944627 /* Project+CoreDataClass.swift in Sources */,
 				46F611B1274774D900708686 /* ProjectCardView.swift in Sources */,
 				46F6116D274733B400708686 /* OnCueApp.swift in Sources */,
-				46F611AA2747370500708686 /* oldProject.swift in Sources */,
 				4652FD87274BA6A4009BE526 /* CardListView.swift in Sources */,
 				46C94EFB2755E0C10038A930 /* PresentationViewPhone.swift in Sources */,
 				46C241DB275885AF00944627 /* DataController.swift in Sources */,

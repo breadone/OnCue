@@ -26,7 +26,7 @@ struct CardListView: View {
         GeometryReader { geo in
             ScrollView {
                 LazyVGrid(columns: columns, spacing: 20) {
-                    ForEach(self.project.wrappedCards, id: \.id) { card in
+                    ForEach(self.project.cards, id: \.id) { card in
                         SingleCardView(card: card)
                             .padding(.vertical, geo.size.height / 170)
                             .padding(.horizontal, geo.size.width / 45)
@@ -52,7 +52,7 @@ struct CardListView: View {
             }
         }
         .sheet(isPresented: $showingAddScreen) {
-            NavigationView { AddCardView(projectID: self.project.id!) }
+            NavigationView { AddCardView(project: self.project) }
         }
         .alert(self.alertText, isPresented: $alertShowing) {
             Button("OK", role: .cancel) { self.alertText = "" }

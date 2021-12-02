@@ -11,11 +11,11 @@ import Defaults
 @objc(Card)
 public class Card: NSObject, Codable, Identifiable, DefaultsSerializable {
     public let id: UUID
-    var position: Int
+    var position: Int16
     var text: String
     var dateCreated: Date
     
-    init(_ pos: Int, text: String) {
+    init(_ pos: Int16, text: String) {
         self.id = UUID()
         self.position = pos
         self.text = text
