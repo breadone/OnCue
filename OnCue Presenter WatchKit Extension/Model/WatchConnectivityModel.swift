@@ -11,7 +11,7 @@ import WatchConnectivity
 class WatchConnectivityModel: NSObject, WCSessionDelegate, ObservableObject {
     var session: WCSession
     
-    @Published var project = Project.defaultWatchProject
+    @Published var project = oldProject.defaultWatchProject
     var projectData = Data()
     let decoder = PropertyListDecoder()
     
@@ -31,9 +31,9 @@ class WatchConnectivityModel: NSObject, WCSessionDelegate, ObservableObject {
             self.projectData = (message["project"] as? Data ?? Data())
             
             do {
-                self.project = try decoder.decode(Project.self, from: projectData)
+                self.project = try decoder.decode(oldProject.self, from: projectData)
             } catch {
-                self.project = Project.errorProject
+                self.project = oldProject.errorProject
             }
         }
     }

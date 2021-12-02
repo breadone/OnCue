@@ -10,7 +10,7 @@ import Defaults
 
 struct AddProjectView: View {
     @Environment(\.dismiss) var dismiss
-    @Default(.projects) private var projectList: [Project]
+    @Default(.projects) private var projectList: [oldProject]
     @State private var name: String = "New Project"
     
     var body: some View {
@@ -32,8 +32,8 @@ struct AddProjectView: View {
 }
 
 extension AddProjectView {
-    func createProject() -> Project {
-        return Project(name: self.name)
+    func createProject() -> oldProject {
+        return oldProject(name: self.name)
     }
 }
 

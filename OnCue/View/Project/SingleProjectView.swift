@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ProjectCardView: View {
-    var project: Project = Project.testProject
+    var project: oldProject = oldProject.testProject
     var bgColour: Color = .accentColor
     
     var body: some View {

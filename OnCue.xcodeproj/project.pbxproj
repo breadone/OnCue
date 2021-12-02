@@ -25,6 +25,7 @@
 		4615DFAD274E04F000C9DB98 /* WatchConnectivityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4615DFAC274E04F000C9DB98 /* WatchConnectivityModel.swift */; };
 		4652FD87274BA6A4009BE526 /* CardListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4652FD86274BA6A4009BE526 /* CardListView.swift */; };
 		4652FD89274BB463009BE526 /* SingleCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4652FD88274BB463009BE526 /* SingleCardView.swift */; };
+		46C241D92758816000944627 /* OnCue.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 46C241D72758816000944627 /* OnCue.xcdatamodeld */; };
 		46C94EF927545D5D0038A930 /* PreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C94EF827545D5D0038A930 /* PreferencesView.swift */; };
 		46C94EFB2755E0C10038A930 /* PresentationViewPhone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C94EFA2755E0C10038A930 /* PresentationViewPhone.swift */; };
 		46F6116D274733B400708686 /* OnCueApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F6116C274733B400708686 /* OnCueApp.swift */; };
@@ -95,6 +96,7 @@
 		4615DFAC274E04F000C9DB98 /* WatchConnectivityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchConnectivityModel.swift; sourceTree = "<group>"; };
 		4652FD86274BA6A4009BE526 /* CardListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListView.swift; sourceTree = "<group>"; };
 		4652FD88274BB463009BE526 /* SingleCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleCardView.swift; sourceTree = "<group>"; };
+		46C241D82758816000944627 /* OnCue.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = OnCue.xcdatamodel; sourceTree = "<group>"; };
 		46C94EF827545D5D0038A930 /* PreferencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesView.swift; sourceTree = "<group>"; };
 		46C94EFA2755E0C10038A930 /* PresentationViewPhone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationViewPhone.swift; sourceTree = "<group>"; };
 		46F61169274733B400708686 /* OnCue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnCue.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -135,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				4609EA85274D0BA700F3BB48 /* PhoneConnectivityModel.swift */,
+				46C241D72758816000944627 /* OnCue.xcdatamodeld */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -444,6 +447,7 @@
 				46C94EF927545D5D0038A930 /* PreferencesView.swift in Sources */,
 				4609EA86274D0BA700F3BB48 /* PhoneConnectivityModel.swift in Sources */,
 				4609EA82274D022800F3BB48 /* AddCardView.swift in Sources */,
+				46C241D92758816000944627 /* OnCue.xcdatamodeld in Sources */,
 				46F611B52747789E00708686 /* ExtensionColor.swift in Sources */,
 				46F611B1274774D900708686 /* SingleProjectView.swift in Sources */,
 				46F6116D274733B400708686 /* OnCueApp.swift in Sources */,
@@ -823,6 +827,19 @@
 			productName = Defaults;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		46C241D72758816000944627 /* OnCue.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				46C241D82758816000944627 /* OnCue.xcdatamodel */,
+			);
+			currentVersion = 46C241D82758816000944627 /* OnCue.xcdatamodel */;
+			path = OnCue.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 46F61161274733B400708686 /* Project object */;
 }

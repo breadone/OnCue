@@ -8,13 +8,13 @@
 import Foundation
 import Defaults
 
-struct Project: Codable, Identifiable, DefaultsSerializable {
+struct oldProject: Codable, Identifiable, DefaultsSerializable {
     let id: UUID
     var name: String
-    var cards: [Card]
+    var cards: [oldCard]
     var dateCreated: Date
     
-    init(name: String, cards: [Card] = []) {
+    init(name: String, cards: [oldCard] = []) {
         self.id = UUID()
         self.name = name
         self.cards = cards
@@ -22,10 +22,10 @@ struct Project: Codable, Identifiable, DefaultsSerializable {
     }
 }
 
-extension Project {
-    static let testProject = Project(name: "Test Project", cards: [Card(0, text: "card one"), Card(1, text: "card two")])
+extension oldProject {
+    static let testProject = oldProject(name: "Test Project", cards: [oldCard(0, text: "card one"), oldCard(1, text: "card two")])
     
-    static let defaultWatchProject = Project(name: "No Project", cards: [Card(0, text: "Push some cards to your Watch from the iPhone app")])
+    static let defaultWatchProject = oldProject(name: "No Project", cards: [oldCard(0, text: "Push some cards to your Watch from the iPhone app")])
     
-    static let errorProject = Project(name: "Error", cards: [Card(0, text: "An error occured.")])
+    static let errorProject = oldProject(name: "Error", cards: [oldCard(0, text: "An error occured.")])
 }

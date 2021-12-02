@@ -8,7 +8,7 @@
 import Foundation
 import Defaults
 
-struct Card: Codable, Identifiable, DefaultsSerializable {
+struct oldCard: Codable, Identifiable, DefaultsSerializable {
     let id: UUID
     var position: Int
     var text: String

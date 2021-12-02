@@ -18,7 +18,7 @@ struct CardListView: View {
     
     let model = PhoneConnectivityModel()
     
-    var project: Project
+    var project: oldProject
     
     let columns = [GridItem(.flexible(minimum: 100)), GridItem(.flexible(minimum: 100))]
     
@@ -97,7 +97,7 @@ extension CardListView {
 struct CardListView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            CardListView(project: Project.testProject)
+            CardListView(project: oldProject.testProject)
                 .preferredColorScheme(.dark)
         }
     }

@@ -39,7 +39,7 @@ struct AddCardView: View {
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button("Save") {
-                        self.projectList[project].cards.append(Card(lastCard, text: text))
+                        self.projectList[project].cards.append(oldCard(lastCard, text: text))
                         dismiss.callAsFunction()
                     }
                 }
@@ -51,7 +51,7 @@ struct AddCardView: View {
 struct AddCardView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            AddCardView(projectID: Project.testProject.id)
+            AddCardView(projectID: oldProject.testProject.id)
         }
     }
 }

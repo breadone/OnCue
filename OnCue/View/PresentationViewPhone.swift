@@ -11,7 +11,7 @@ struct PresentationViewPhone: View {
     @Environment(\.colorScheme) var cs
     @Environment(\.dismiss) var dismiss
     
-    let project: Project
+    let project: oldProject
     let lightModeColour = Color(white: 0.94, opacity: 1)
     let darkModeColour = Color(white: 0.2, opacity: 0.7)
     
@@ -55,7 +55,7 @@ struct PresentationViewPhone: View {
 struct PresentationViewPhone_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            PresentationViewPhone(project: Project.testProject)
+            PresentationViewPhone(project: oldProject.testProject)
                             .preferredColorScheme(.dark)
         }
     }

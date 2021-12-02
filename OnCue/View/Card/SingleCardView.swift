@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SingleCardView: View {
-    let card: Card
+    let card: oldCard
     var body: some View {
         VStack(alignment: .leading) {
             Text("\(card.position + 1)")

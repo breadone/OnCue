@@ -14,7 +14,7 @@ struct ProjectListView: View {
     
     @Default(.projects) private var projectList
     
-    private var sortedList: [Project] { // sorts projects by date created
+    private var sortedList: [oldProject] { // sorts projects by date created
         self.projectList.sorted {
             $0.dateCreated > $1.dateCreated
         }
