@@ -13,8 +13,10 @@ struct AddCardView: View {
     @Environment(\.dismiss) var dismiss
     @Default(.projects) var projectList
     @State private var text: String = ""
+    @State private var alerttext: String = "no error"
+    @State private var alertshow = false
     
-    var project: Project
+    @EnvironmentObject var project: Project
     
     var lastCard: Int16 {
         Int16(self.project.wrappedCards.endIndex)
@@ -33,11 +35,19 @@ struct AddCardView: View {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button("Save") {
                         self.project.cards.append(Card(lastCard, text: text))
-                        try? context.save()
+                        do {
+                            try context.save()
+                        } catch {
+                            self.alerttext = error.localizedDescription
+                            self.alertshow.toggle()
+                        }
                         dismiss.callAsFunction()
                     }
                 }
-        }
+            }
+            .alert(self.alerttext, isPresented: $alertshow) {
+                Button("OK", role: .cancel) {}
+            }
         }
     }
 }

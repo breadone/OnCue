@@ -21,7 +21,7 @@ struct ProjectListView: View {
             GeometryReader { geo in
                 ScrollView {
                     ForEach(projects, id: \.id) { proj in
-                        NavigationLink(destination: CardListView(project: proj)) {
+                        NavigationLink(destination: CardListView().environmentObject(proj)) {
                             ProjectCardView(project: proj)
                         }
                         .contextMenu {
@@ -62,6 +62,7 @@ struct ProjectListView: View {
 extension ProjectListView {
     func removeProject(_ project: Project) {
         context.delete(project)
+        try? context.save()
     }
 }
 

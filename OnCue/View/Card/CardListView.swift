@@ -18,7 +18,8 @@ struct CardListView: View {
     
     let model = PhoneConnectivityModel()
     
-    var project: Project
+//    var project: Project
+    @EnvironmentObject var project: Project
     
     let columns = [GridItem(.flexible(minimum: 100)), GridItem(.flexible(minimum: 100))]
     
@@ -52,7 +53,7 @@ struct CardListView: View {
             }
         }
         .sheet(isPresented: $showingAddScreen) {
-            NavigationView { AddCardView(project: self.project) }
+            NavigationView { AddCardView() }
         }
         .alert(self.alertText, isPresented: $alertShowing) {
             Button("OK", role: .cancel) { self.alertText = "" }
