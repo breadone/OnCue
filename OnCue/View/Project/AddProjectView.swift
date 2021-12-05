@@ -10,7 +10,6 @@ import Defaults
 
 struct AddProjectView: View {
     @Environment(\.dismiss) var dismiss
-    @Default(.projects) private var projectList: [oldProject]
     @Environment(\.managedObjectContext) var context
     @State private var name: String = "New Project"
     
@@ -30,9 +29,6 @@ struct AddProjectView: View {
             }
         }
     }
-}
-
-extension AddProjectView {
 }
 
 struct AddProjectView_Previews: PreviewProvider {

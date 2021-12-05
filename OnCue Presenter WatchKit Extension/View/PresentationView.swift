@@ -15,7 +15,7 @@ struct PresentationView: View {
             GeometryReader { geometry in
                 TabView {
                     // FORCE UNWRAP WILL FAIL ITS JUST A PLACEHOLDER
-                    ForEach(model.project!.wrappedCards, id: \.id) { card in
+                    ForEach(model.project?.wrappedCards ?? [], id: \.id) { card in
                         Text(card.text)
                             .padding(.top, 3) // apple watch 3 reasons
                             .frame(width: geometry.size.width,
@@ -23,7 +23,7 @@ struct PresentationView: View {
                                    alignment: .topLeading)
                     }
                 }
-                .navigationTitle(model.project!.wrappedName)
+                .navigationTitle(model.project?.wrappedName ?? "No Name")
             }
         }
     }

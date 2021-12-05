@@ -34,7 +34,7 @@ struct AddCardView: View {
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button("Save") {
-                        self.project.cards.append(Card(lastCard, text: text))
+                        self.project.cards?.append(Card(lastCard, text: text))
                         do {
                             try context.save()
                         } catch {

@@ -13,8 +13,8 @@ struct ProjectListView: View {
     @State private var showingAddScreen = false
     @State private var showingPrefsScreen = false
     
-    @Default(.projects) private var projectList
-    @FetchRequest(sortDescriptors: [SortDescriptor(\.dateCreated, order: .reverse)]) var projects: FetchedResults<Project>
+    @FetchRequest(sortDescriptors: [SortDescriptor(\.dateCreated, order: .reverse)])
+    var projects: FetchedResults<Project>
     
     var body: some View {
         NavigationView {

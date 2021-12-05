@@ -17,11 +17,14 @@ public class Project: NSManagedObject, Codable {
     
     // MARK: Decodable Conformance
     public required convenience init(from decoder: Decoder) throws {
-        guard let context = decoder.userInfo[CodingUserInfoKey.context!] as? NSManagedObjectContext else { fatalError() }
+        guard let context = decoder.userInfo[CodingUserInfoKey.context] as? NSManagedObjectContext else {
+            fatalError()
+        }
         
-        guard let entity = NSEntityDescription.entity(forEntityName: "Project", in: context) else { fatalError() }
+//        guard let entity = NSEntityDescription.entity(forEntityName: "Project", in: context) else { fatalError() }
         
-        self.init(entity: entity, insertInto: context)
+//        self.init(entity: entity, insertInto: context)
+        self.init(context: context)
         
         let container = try decoder.container(keyedBy: CodingKeys.self)
         

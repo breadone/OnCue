@@ -19,7 +19,7 @@ extension Project {
     @NSManaged public var id: UUID?
     @NSManaged public var name: String?
     @NSManaged public var dateCreated: Date
-    @NSManaged public var cards: [Card]
+    @NSManaged public var cards: [Card]?
     
     public var wrappedName: String {
         self.name ?? "No Name"

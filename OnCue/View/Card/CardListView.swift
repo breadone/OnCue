@@ -27,7 +27,7 @@ struct CardListView: View {
         GeometryReader { geo in
             ScrollView {
                 LazyVGrid(columns: columns, spacing: 20) {
-                    ForEach(self.project.cards, id: \.id) { card in
+                    ForEach(self.project.wrappedCards, id: \.id) { card in
                         SingleCardView(card: card)
                             .padding(.vertical, geo.size.height / 170)
                             .padding(.horizontal, geo.size.width / 45)
