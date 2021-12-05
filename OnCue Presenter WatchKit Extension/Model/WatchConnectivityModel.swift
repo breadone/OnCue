@@ -10,7 +10,6 @@ import WatchConnectivity
 
 class WatchConnectivityModel: NSObject, WCSessionDelegate, ObservableObject {
     var session: WCSession
-    private let dataController = DataController()
     
     @Published var project: Project?
     var projectData = Data()
@@ -32,7 +31,7 @@ class WatchConnectivityModel: NSObject, WCSessionDelegate, ObservableObject {
             self.projectData = (message["project"] as? Data ?? Data())
             
             do {
-                decoder.userInfo[CodingUserInfoKey.context] = dataController.container.viewContext
+                decoder.userInfo[CodingUserInfoKey.context] = DataController.shared.container.viewContext
                 self.project = try decoder.decode(Project.self, from: projectData)
             } catch {
                 fatalError()

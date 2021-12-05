@@ -11,10 +11,9 @@ import Defaults
 struct AddCardView: View {
     @Environment(\.managedObjectContext) var context
     @Environment(\.dismiss) var dismiss
-    @Default(.projects) var projectList
-    @State private var text: String = ""
-    @State private var alerttext: String = "no error"
-    @State private var alertshow = false
+    @State private var newCardText: String = ""
+    @State private var alertText: String = "no error"
+    @State private var alertShow = false
     
     @EnvironmentObject var project: Project
     
@@ -26,7 +25,7 @@ struct AddCardView: View {
         GeometryReader { geo in
             Form {
                 Section(header: Text("Text")) {
-                    TextEditor(text: $text)
+                    TextEditor(text: $newCardText)
                         .frame(minHeight: geo.size.height * 0.75)
                 }
             }
@@ -34,18 +33,18 @@ struct AddCardView: View {
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button("Save") {
-                        self.project.cards?.append(Card(lastCard, text: text))
+                        self.project.cards?.append(Card(lastCard, text: newCardText))
                         do {
                             try context.save()
                         } catch {
-                            self.alerttext = error.localizedDescription
-                            self.alertshow.toggle()
+                            self.alertText = error.localizedDescription
+                            self.alertShow.toggle()
                         }
                         dismiss.callAsFunction()
                     }
                 }
             }
-            .alert(self.alerttext, isPresented: $alertshow) {
+            .alert(self.alertText, isPresented: $alertShow) {
                 Button("OK", role: .cancel) {}
             }
         }
