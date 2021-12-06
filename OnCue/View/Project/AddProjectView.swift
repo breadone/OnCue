@@ -17,6 +17,11 @@ struct AddProjectView: View {
         Form {
             Section(header: Text("Name")) {
                 TextField("Name of Project", text: $name)
+                    .onReceive(NotificationCenter.default.publisher(for: UITextField.textDidBeginEditingNotification)) { obj in
+                        if let textField = obj.object as? UITextField {
+                            textField.selectedTextRange = textField.textRange(from: textField.beginningOfDocument, to: textField.endOfDocument)
+                        }
+                    }
             }
         }
         .navigationTitle("Create Project")

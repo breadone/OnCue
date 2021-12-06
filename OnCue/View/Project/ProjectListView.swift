@@ -10,6 +10,7 @@ import CoreData
 
 struct ProjectListView: View {
     @Environment(\.managedObjectContext) var context
+    @Environment(\.dismiss) var dismiss
     @State private var showingAddScreen = false
     @State private var showingPrefsScreen = false
     
@@ -67,13 +68,8 @@ struct ProjectListView: View {
             .sheet(isPresented: $showingPrefsScreen) {
                 NavigationView { PreferencesView() }
             }
-            .sheet(isPresented: $showingRenameScreen,
-                   onDismiss: {renameProject(projectToRename!)}) {
-                NavigationView {
-                    TextField(text: $newName) {
-                        Text("New Name")
-                    }
-                }
+            .sheet(isPresented: $showingRenameScreen, onDismiss: renameProject) {
+                RenameProjectView(newName: $newName)
             }
         }
     }
@@ -85,8 +81,9 @@ extension ProjectListView {
         try? context.save()
     }
     
-    func renameProject(_ project: Project) {
-        project.name = self.newName
+    func renameProject() {
+        // FU bc its always gonna be set when this is called
+        self.projectToRename!.name = self.newName
         try? context.save()
     }
 }
@@ -94,6 +91,6 @@ extension ProjectListView {
 struct ProjectListView_Previews: PreviewProvider {
     static let context = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
     static var previews: some View {
-        ProjectListView().environment(\.managedObjectContext, context)
+        ProjectListView().environment(\.managedObjectContext, DataController.shared.container.viewContext)
     }
 }
