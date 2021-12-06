@@ -6,15 +6,22 @@
 //
 
 import SwiftUI
-import Defaults
+import CoreData
 
 struct ProjectListView: View {
     @Environment(\.managedObjectContext) var context
     @State private var showingAddScreen = false
     @State private var showingPrefsScreen = false
     
+    @State private var showingRenameScreen = false
+    @State private var newName: String = ""
+    @State private var projectToRename: Project?
+    
     @FetchRequest(sortDescriptors: [SortDescriptor(\.dateCreated, order: .reverse)])
     var projects: FetchedResults<Project>
+//    @FetchRequest(entity: Project.entity(),
+//                  sortDescriptors: [NSSortDescriptor(keyPath: \Project.dateCreated, ascending: false)]
+//    ) var projects: FetchedResults<Project>
     
     var body: some View {
         NavigationView {
@@ -29,6 +36,14 @@ struct ProjectListView: View {
                                 Text("Delete")
                                 Image(systemName: "trash")
                             }
+                            Button {
+                                self.projectToRename = proj
+                                self.showingRenameScreen.toggle()
+                            } label: {
+                                Text("Rename")
+                                Image(systemName: "pencil")
+                            }
+
                         }
                         .padding(.vertical, geo.size.height / 170)
                         .padding(.horizontal, geo.size.width / 30)
@@ -55,6 +70,14 @@ struct ProjectListView: View {
             .sheet(isPresented: $showingPrefsScreen) {
                 NavigationView { PreferencesView() }
             }
+            .sheet(isPresented: $showingRenameScreen,
+                   onDismiss: {renameProject(projectToRename!)}) {
+                NavigationView {
+                    TextField(text: $newName) {
+                        Text("New Name")
+                    }
+                }
+            }
         }
     }
 }
@@ -64,10 +87,16 @@ extension ProjectListView {
         context.delete(project)
         try? context.save()
     }
+    
+    func renameProject(_ project: Project) {
+        project.name = self.newName
+        try? context.save()
+    }
 }
 
 struct ProjectListView_Previews: PreviewProvider {
+    static let context = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
     static var previews: some View {
-        ProjectListView()
+        ProjectListView().environment(\.managedObjectContext, context)
     }
 }

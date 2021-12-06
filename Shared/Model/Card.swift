@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import Defaults
 
 @objc(Card)
 public class Card: NSObject, Codable, Identifiable {

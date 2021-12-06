@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct ProjectCardView: View {
     var project: Project
@@ -23,7 +24,7 @@ struct ProjectCardView: View {
                     .foregroundColor(.white)
             }
             HStack {
-                if self.project.wrappedCards.capacity <= 5 {
+                if self.project.wrappedCards.capacity < 5 {
                     ForEach(self.project.wrappedCards, id: \.id) { card in
                         Text(card.text)
                             .font(.system(size: 14))
@@ -55,7 +56,18 @@ struct ProjectCardView: View {
 }
 
 //struct ProjectCardView_Previews: PreviewProvider {
+//    static let context = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
+//    
 //    static var previews: some View {
-//        ProjectCardView()
+//        let proj = Project(context: context)
+//        proj.name = "Test"
+//        proj.id = UUID()
+//        proj.dateCreated = Date()
+//        proj.cards = [Card(0, text: "Card"), Card(1, text: "Card"), Card(2, text: "Card"), Card(3, text: "Card"), Card(4, text: "Card")]
+//        
+//        return NavigationView {
+//            ProjectCardView(project: proj)
+//                .environment(\.managedObjectContext, DataController.shared.container.viewContext)
+//        }
 //    }
 //}
