@@ -9,7 +9,7 @@ import SwiftUI
 import CoreData
 
 struct ProjectCardView: View {
-    var project: Project
+    @EnvironmentObject var project: Project
     var bgColour: Color = .accentColor
     
     var body: some View {

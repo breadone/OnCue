@@ -19,9 +19,6 @@ struct ProjectListView: View {
     
     @FetchRequest(sortDescriptors: [SortDescriptor(\.dateCreated, order: .reverse)])
     var projects: FetchedResults<Project>
-//    @FetchRequest(entity: Project.entity(),
-//                  sortDescriptors: [NSSortDescriptor(keyPath: \Project.dateCreated, ascending: false)]
-//    ) var projects: FetchedResults<Project>
     
     var body: some View {
         NavigationView {
@@ -29,13 +26,9 @@ struct ProjectListView: View {
                 ScrollView {
                     ForEach(projects, id: \.id) { proj in
                         NavigationLink(destination: CardListView().environmentObject(proj)) {
-                            ProjectCardView(project: proj)
+                            ProjectCardView().environmentObject(proj)
                         }
                         .contextMenu {
-                            Button(action: {self.removeProject(proj)}) {
-                                Text("Delete")
-                                Image(systemName: "trash")
-                            }
                             Button {
                                 self.projectToRename = proj
                                 self.showingRenameScreen.toggle()
@@ -43,7 +36,11 @@ struct ProjectListView: View {
                                 Text("Rename")
                                 Image(systemName: "pencil")
                             }
-
+                            
+                            Button(action: {self.removeProject(proj)}) {
+                                Text("Delete")
+                                Image(systemName: "trash")
+                            }
                         }
                         .padding(.vertical, geo.size.height / 170)
                         .padding(.horizontal, geo.size.width / 30)
