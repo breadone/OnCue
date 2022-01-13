@@ -29,6 +29,11 @@ extension Project {
         self.cards ?? []
     }
     
+    public var sortedCards: [Card] {
+        self.wrappedCards.sorted {
+            $0.position < $1.position
+        }
+    }
 }
 
 extension Project: Identifiable {

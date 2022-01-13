@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import Defaults
 
 struct AddProjectView: View {
     @Environment(\.dismiss) var dismiss

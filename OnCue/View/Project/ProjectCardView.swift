@@ -10,6 +10,7 @@ import CoreData
 
 struct ProjectCardView: View {
     @EnvironmentObject var project: Project
+//    @Binding var editMode: Bool = false
     var bgColour: Color = .accentColor
     
     var body: some View {
