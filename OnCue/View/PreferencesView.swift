@@ -18,9 +18,9 @@ struct PreferencesView: View {
             }
             
             Section(header: Text("Support Me")) {
-                PurchaseButton("Fresh Fruit 🍎", 0.99)
-                PurchaseButton("Cappuchino ☕️", 4.99)
-                PurchaseButton("Lunch 🍱", 19.99)
+                PurchaseButton("🍎 Fresh Fruit", 0.99)
+                PurchaseButton("☕️ Cappuchino", 4.99)
+                PurchaseButton("🍱 Lunch", 19.99)
             }
             
         }

@@ -45,7 +45,7 @@ struct ProjectCardView: View {
                             .background(Color(white: 1, opacity: 0.25))
                             .cornerRadius(11)
                     }
-                    Image(systemName: "ellipsis").foregroundColor(.white)
+                    Image(systemName: "ellipsis.circle.fill").foregroundColor(Color(white: 1, opacity: 0.5))
                 }
             }
         }

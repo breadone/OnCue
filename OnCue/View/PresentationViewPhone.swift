@@ -10,6 +10,7 @@ import SwiftUI
 struct PresentationViewPhone: View {
     @Environment(\.colorScheme) var cs
     @Environment(\.dismiss) var dismiss
+    @StateObject private var timer = TimerManager()
     
     let project: Project
     let lightModeColour = Color(white: 0.94, opacity: 1)
@@ -39,7 +40,8 @@ struct PresentationViewPhone: View {
                 .tabViewStyle(.page)
             }
         }
-        .navigationTitle(self.project.wrappedName).navigationBarTitleDisplayMode(.inline)
+        .navigationTitle(self.project.wrappedName + "\t" + timer.formattedTime)
+            .navigationBarTitleDisplayMode(.inline)
         .navigationBarBackButtonHidden(true)
         .toolbar {
             ToolbarItem(placement: .navigationBarLeading) {
@@ -51,6 +53,8 @@ struct PresentationViewPhone: View {
         }
     }
 }
+
+
 
 //struct PresentationViewPhone_Previews: PreviewProvider {
 //    static var previews: some View {
